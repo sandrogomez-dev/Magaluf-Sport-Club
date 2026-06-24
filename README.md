@@ -46,6 +46,7 @@ Páginas: `/`, `/padel`, `/futbol-7`, `/eventos`, `/nosotros`, `/contacto` (por 
 6. [Estructura de la landing](docs/06-estructura-landing.md) — secciones validadas y orientación a conversión.
 7. [Hallazgos de Instagram](docs/07-instagram-hallazgos.md) — datos y material extraído del perfil.
 8. [Dirección visual v2](docs/08-direccion-visual-v2.md) — plan de mejora visual (navy+oro, anti-genérico).
+9. [Pendientes / cliente](docs/09-pendientes-cliente.md) — checklist de info y decisiones para cerrar la web.
 
 ## Datos del negocio (referencia rápida)
 
