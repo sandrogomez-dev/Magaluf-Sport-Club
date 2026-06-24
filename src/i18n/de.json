@@ -185,6 +185,23 @@
       "title": "Über den Club",
       "intro": "Ein Sportclub mit Gemeinschaftsgeist im Herzen von Magaluf.",
       "body": "Magaluf Sport Club ist viel mehr als Padel: 7 Plätze, ein Fußball-7-Platz, Café-Bar und Kinderbereich an einem Ort. Ein Ort zum Spielen, Wettkämpfen und Genießen mit Familie oder Freunden, das ganze Jahr über.",
+      "story": {
+        "eyebrow": "Unsere Geschichte",
+        "title": "Eine sportliche Referenz in Magaluf"
+      },
+      "amenities": {
+        "title": "Alles, was du brauchst, an einem Ort",
+        "cafe": "Café",
+        "shop": "Shop",
+        "lockers": "Umkleidekabinen",
+        "parking": "Kostenlose Parkplätze"
+      },
+      "team": {
+        "eyebrow": "Unser Team",
+        "title": "Profis, die dich besser machen",
+        "intro": "Ein Team qualifizierter Trainer für alle Altersgruppen und Niveaus.",
+        "roles": { "head": "Cheftrainer", "fitness": "Fitnesstrainer" }
+      },
       "values": [
         { "title": "Gemeinschaft", "desc": "Ein Club, in dem man auf und neben dem Platz zum Team wird." },
         { "title": "Für alle", "desc": "Kinder, Erwachsene, Anfänger und Wettkämpfer." },

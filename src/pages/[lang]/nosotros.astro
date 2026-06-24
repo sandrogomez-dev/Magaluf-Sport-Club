@@ -1,11 +1,15 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageIntro from '../../components/sections/PageIntro.astro';
+import FeatureSplit from '../../components/sections/FeatureSplit.astro';
 import Section from '../../components/ui/Section.astro';
+import Heading from '../../components/ui/Heading.astro';
+import Icon from '../../components/ui/Icon.astro';
 import StatsBar from '../../components/sections/StatsBar.astro';
 import Gallery from '../../components/sections/Gallery.astro';
 import LocationContact from '../../components/sections/LocationContact.astro';
 import { languages, useTranslations, getDict, type Lang } from '../../i18n/ui';
+import { club } from '../../content/club';
 
 export function getStaticPaths() {
   return (Object.keys(languages) as Lang[]).map((lang) => ({ params: { lang } }));
@@ -14,22 +18,76 @@ const { lang } = Astro.params as { lang: Lang };
 const t = useTranslations(lang);
 const dict = getDict(lang);
 const values: { title: string; desc: string }[] = dict.pages.about.values;
+
+const amenities = [
+  { icon: 'cafe', label: t('pages.about.amenities.cafe') },
+  { icon: 'shop', label: t('pages.about.amenities.shop') },
+  { icon: 'lockers', label: t('pages.about.amenities.lockers') },
+  { icon: 'parking', label: t('pages.about.amenities.parking') },
+];
 ---
 
 <BaseLayout lang={lang} title={dict.seo.about.title} description={dict.seo.about.description}>
   <PageIntro eyebrow={t('nav.about')} title={dict.pages.about.title} intro={dict.pages.about.intro} image="aerial-sign.jpg" />
 
-  <Section bg="white">
-    <p class="mx-auto max-w-3xl text-center text-xl leading-relaxed text-muted" data-reveal>
-      {dict.pages.about.body}
-    </p>
+  <!-- Historia (llena la parte de arriba) -->
+  <FeatureSplit
+    eyebrow={t('pages.about.story.eyebrow')}
+    title={t('pages.about.story.title')}
+    desc={dict.pages.about.body}
+    image="club-overview.jpg"
+  />
 
-    <div class="mt-14 grid gap-6 sm:grid-cols-3">
+  <!-- Valores -->
+  <Section bg="surface">
+    <div class="grid gap-6 sm:grid-cols-3">
       {
         values.map((v, i) => (
-          <div class="rounded-[1.25rem] bg-surface p-8 ring-1 ring-line/60" data-reveal style={`transition-delay:${i * 80}ms`}>
+          <div class="rounded-[1.25rem] bg-white p-8 ring-1 ring-line/60" data-reveal style={`transition-delay:${i * 80}ms`}>
             <h3 class="font-display text-xl font-bold text-brand">{v.title}</h3>
             <p class="mt-3 leading-relaxed text-muted">{v.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+  </Section>
+
+  <!-- Servicios del club -->
+  <Section bg="white">
+    <Heading title={t('pages.about.amenities.title')} align="center" />
+    <div class="mx-auto mt-12 grid max-w-3xl grid-cols-2 gap-4 sm:grid-cols-4">
+      {
+        amenities.map((a, i) => (
+          <div class="flex flex-col items-center gap-3 rounded-2xl bg-surface px-4 py-7 text-center" data-reveal style={`transition-delay:${i * 60}ms`}>
+            <span class="grid h-12 w-12 place-items-center rounded-full bg-brand/10 text-brand">
+              <Icon name={a.icon} size={24} />
+            </span>
+            <span class="text-sm font-semibold text-ink">{a.label}</span>
+          </div>
+        ))
+      }
+    </div>
+  </Section>
+
+  <!-- Equipo -->
+  <Section bg="surface">
+    <Heading
+      eyebrow={t('pages.about.team.eyebrow')}
+      title={t('pages.about.team.title')}
+      intro={t('pages.about.team.intro')}
+      align="center"
+    />
+    <div class="mx-auto mt-12 grid max-w-3xl gap-6 sm:grid-cols-2">
+      {
+        club.team.map((m, i) => (
+          <div class="flex items-center gap-5 rounded-[1.25rem] bg-white p-6 ring-1 ring-line/60 transition-all hover:-translate-y-1 hover:ring-gold" data-reveal style={`transition-delay:${i * 80}ms`}>
+            <span class="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-navy font-display text-xl font-extrabold text-gold">
+              {m.initials}
+            </span>
+            <div>
+              <p class="font-display text-lg font-bold text-ink">{m.name}</p>
+              <p class="text-sm text-muted">{t(`pages.about.team.roles.${m.roleKey}`)}</p>
+            </div>
           </div>
         ))
       }

@@ -34,6 +34,12 @@ export const club = {
     parking: true,
   },
 
+  // Equipo de entrenadores. PENDIENTE: fotos individuales. Dany Ferrer dado de baja del equipo.
+  team: [
+    { name: 'Maxi Zanazzi', roleKey: 'head', initials: 'MZ' },
+    { name: 'Ángel Bonilla', roleKey: 'fitness', initials: 'AB' },
+  ],
+
   // Paquete "Mallorca Padel Experience" (del flyer de Instagram) — PENDIENTE confirmar vigencia.
   holidays: {
     hotel: 'Hotel Flamboian Caribe & Spa',
