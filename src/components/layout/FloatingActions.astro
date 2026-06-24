@@ -73,7 +73,7 @@ const actions = [
   <!-- Botón único (solo móvil): abre/cierra las acciones -->
   <button
     id="fab-toggle"
-    class="grid h-14 w-14 place-items-center rounded-full bg-navy text-white shadow-xl ring-1 ring-black/10 transition-transform active:scale-95 sm:hidden"
+    class="relative grid h-14 w-14 place-items-center rounded-full bg-gold text-navy shadow-xl shadow-gold/40 ring-1 ring-black/5 transition-transform active:scale-95 sm:hidden"
     aria-label={t('nav.contact')}
     aria-expanded="false"
     aria-controls="fab-actions"
@@ -104,8 +104,27 @@ const actions = [
     from { opacity: 0; transform: translateY(10px) scale(0.85); }
     to { opacity: 1; transform: none; }
   }
+  /* Pulso para llamar la atención (solo cerrado) */
+  #fab-toggle::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 9999px;
+    background: var(--color-gold);
+    animation: fab-pulse 2.4s ease-out infinite;
+  }
+  #fab[data-open='true'] #fab-toggle::before {
+    animation: none;
+  }
+  @keyframes fab-pulse {
+    0% { transform: scale(1); opacity: 0.55; }
+    70% { transform: scale(1.7); opacity: 0; }
+    100% { transform: scale(1.7); opacity: 0; }
+  }
   @media (prefers-reduced-motion: reduce) {
     #fab[data-open='true'] #fab-actions a { animation: none; }
+    #fab-toggle::before { animation: none; }
   }
 </style>
 
