@@ -14,12 +14,12 @@ export const club = {
   instagram: 'https://www.instagram.com/magalufsportclub/',
   website: 'https://magalufsportclub.com',
 
-  // PENDIENTE: dirección postal exacta + coordenadas + enlace Maps real.
-  address: 'Magaluf, Calvià, Mallorca (Illes Balears)',
+  address: 'Av. Pere Vaquer, 47, 07181 Magaluf, Illes Balears',
   mapsEmbed:
-    'https://www.google.com/maps?q=Magaluf+Sport+Club+Calvia+Mallorca&output=embed',
-  mapsLink: 'https://www.google.com/maps/search/?api=1&query=Magaluf+Sport+Club+Calvia',
-  geo: { lat: 39.5101, lng: 2.5326 }, // aprox. Magaluf — PENDIENTE precisar
+    'https://www.google.com/maps?q=Magaluf+Sport+Club,+Av.+Pere+Vaquer+47,+07181+Magaluf&output=embed',
+  mapsLink:
+    'https://www.google.com/maps/search/?api=1&query=Magaluf+Sport+Club,+Av.+Pere+Vaquer+47,+07181+Magaluf',
+  geo: { lat: 39.5101, lng: 2.5326 }, // aprox. — afinar si hace falta
 
   hours: {
     weekdays: '09:00–22:00',
