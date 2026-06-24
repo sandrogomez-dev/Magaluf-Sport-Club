@@ -1,0 +1,130 @@
+---
+import { Image } from 'astro:assets';
+import { useTranslations, localizePath, getPathWithoutLang, type Lang } from '../../i18n/ui';
+import { club } from '../../content/club';
+import { img } from '../../lib/images';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+interface Props {
+  lang: Lang;
+  url: URL;
+}
+
+const { lang, url } = Astro.props;
+const t = useTranslations(lang);
+const current = getPathWithoutLang(url);
+
+const nav = [
+  { href: '/', label: t('nav.home') },
+  { href: '/padel', label: t('nav.padel') },
+  { href: '/futbol-7', label: t('nav.football') },
+  { href: '/eventos', label: t('nav.events') },
+  { href: '/nosotros', label: t('nav.about') },
+  { href: '/contacto', label: t('nav.contact') },
+];
+
+const isActive = (href: string) =>
+  href === '/' ? current === '/' : current.startsWith(href);
+---
+
+<header id="site-header" class="site-header fixed inset-x-0 top-0 z-50 transition-all duration-300" data-at-top="true">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
+    <!-- Logo -->
+    <a href={localizePath(lang, '/')} class="flex items-center gap-2.5" aria-label="Magaluf Sport Club">
+      <Image src={img('logo.png')} alt="Magaluf Sport Club" width={96} height={84} class="h-11 w-auto" loading="eager" />
+      <span class="hidden font-display text-base font-extrabold leading-tight tracking-tight sm:block">
+        Magaluf<br /><span class="text-gold">Sport Club</span>
+      </span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden items-center gap-0.5 lg:flex" aria-label="Principal">
+      {
+        nav.map((item) => (
+          <a
+            href={localizePath(lang, item.href)}
+            aria-current={isActive(item.href) ? 'page' : undefined}
+            class={`rounded-full px-3 py-2 text-sm font-semibold transition-colors hover:text-gold ${
+              isActive(item.href) ? 'text-gold' : ''
+            }`}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <LanguageSwitcher lang={lang} url={url} class="hidden sm:flex" />
+      <a
+        href={club.booking}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hidden rounded-full bg-gold px-5 py-2.5 text-sm font-display font-bold text-navy shadow-lg shadow-gold/20 transition-all hover:-translate-y-0.5 hover:bg-accent-dark sm:inline-flex"
+      >
+        {t('common.book')}
+      </a>
+
+      <button
+        id="menu-toggle"
+        class="grid h-10 w-10 place-items-center rounded-full ring-1 ring-current/30 lg:hidden"
+        aria-label={t('common.menu')}
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden border-t border-line bg-white px-5 py-4 text-ink lg:hidden">
+    <nav class="flex flex-col gap-1" aria-label="Móvil">
+      {
+        nav.map((item) => (
+          <a href={localizePath(lang, item.href)} class="rounded-xl px-3 py-3 text-base font-semibold hover:bg-surface">
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+    <div class="mt-4 flex items-center justify-between">
+      <LanguageSwitcher lang={lang} url={url} />
+      <a href={club.booking} target="_blank" rel="noopener noreferrer" class="rounded-full bg-gold px-5 py-2.5 text-sm font-bold text-navy">
+        {t('common.bookPlaytomic')}
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  /* Sobre el hero (arriba): texto blanco. Al hacer scroll: fondo claro + texto navy. */
+  .site-header { color: #fff; }
+  .site-header[data-at-top='false'] {
+    color: var(--color-ink);
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  }
+</style>
+
+<script>
+  const header = document.getElementById('site-header');
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  const onScroll = () => {
+    if (header) header.dataset.atTop = String(window.scrollY < 20);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  toggle?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('hidden') === false;
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+</script>

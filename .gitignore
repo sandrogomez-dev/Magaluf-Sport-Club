@@ -1,0 +1,24 @@
+# build output
+dist/
+.output/
+
+# dependencies
+node_modules/
+
+# astro
+.astro/
+
+# environment
+.env
+.env.production
+
+# macOS
+.DS_Store
+
+# logs
+npm-debug.log*
+*.log
+
+# originales pesados (drones, vídeos sin comprimir, logo fuente…) — viven en Drive,
+# NO en el repo del sitio. El build solo usa src/assets/ y public/.
+/assets/

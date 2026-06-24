@@ -1,0 +1,32 @@
+---
+// Raíz: detecta el idioma del navegador y redirige a /es, /en o /de.
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Magaluf Sport Club</title>
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href="https://magalufsportclub.com/es/" />
+    <script is:inline>
+      (function () {
+        var supported = ['es', 'en', 'de'];
+        var nav = (navigator.language || 'es').slice(0, 2).toLowerCase();
+        var lang = supported.indexOf(nav) !== -1 ? nav : 'es';
+        window.location.replace('/' + lang + '/');
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <p>Elige tu idioma / Choose your language / Wähle deine Sprache:</p>
+      <ul>
+        <li><a href="/es/">Español</a></li>
+        <li><a href="/en/">English</a></li>
+        <li><a href="/de/">Deutsch</a></li>
+      </ul>
+    </noscript>
+  </body>
+</html>

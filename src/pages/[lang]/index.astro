@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/sections/Hero.astro';
+import ServicesGrid from '../../components/sections/ServicesGrid.astro';
+import VideoSection from '../../components/sections/VideoSection.astro';
+import FeatureSplit from '../../components/sections/FeatureSplit.astro';
+import ParallaxBand from '../../components/sections/ParallaxBand.astro';
+import Holidays from '../../components/sections/Holidays.astro';
+import EventsTeaser from '../../components/sections/EventsTeaser.astro';
+import Gallery from '../../components/sections/Gallery.astro';
+import LocationContact from '../../components/sections/LocationContact.astro';
+import CtaBanner from '../../components/sections/CtaBanner.astro';
+import { languages, useTranslations, getDict, localizePath, type Lang } from '../../i18n/ui';
+import { club } from '../../content/club';
+
+export function getStaticPaths() {
+  return (Object.keys(languages) as Lang[]).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Lang };
+const t = useTranslations(lang);
+const dict = getDict(lang);
+---
+
+<BaseLayout lang={lang} title={dict.seo.home.title} description={dict.seo.home.description}>
+  <Hero lang={lang} />
+  <ServicesGrid lang={lang} />
+
+  <FeatureSplit
+    eyebrow={t('padelSection.eyebrow')}
+    title={t('padelSection.title')}
+    desc={t('padelSection.desc')}
+    features={dict.padelSection.features}
+    image="padel-coaching.jpg"
+    badgeValue="7"
+    badgeLabel={t('stats.padel')}
+    ctaLabel={t('padelSection.cta')}
+    ctaHref={club.booking}
+    ctaExternal
+  />
+
+  <FeatureSplit
+    eyebrow={t('classesSection.eyebrow')}
+    title={t('classesSection.title')}
+    desc={t('classesSection.desc')}
+    features={dict.classesSection.features}
+    image="coaches.jpg"
+    reverse
+    bg="surface"
+    ctaLabel={t('classesSection.cta')}
+    ctaHref={localizePath(lang, '/contacto')}
+  />
+
+  <VideoSection lang={lang} />
+
+  <ParallaxBand image="aerial-night.jpg" eyebrow={t('establishing.eyebrow')} title={t('establishing.title')} />
+
+  <FeatureSplit
+    eyebrow={t('footballSection.eyebrow')}
+    title={t('footballSection.title')}
+    desc={t('footballSection.desc')}
+    features={dict.footballSection.features}
+    image="football-aerial.jpg"
+    ctaLabel={t('footballSection.cta')}
+    ctaHref={club.booking}
+    ctaExternal
+  />
+
+  <Holidays lang={lang} />
+  <EventsTeaser lang={lang} />
+
+  <FeatureSplit
+    eyebrow={t('shopSection.eyebrow')}
+    title={t('shopSection.title')}
+    desc={t('shopSection.desc')}
+    features={dict.shopSection.features}
+    image="shop.jpg"
+    reverse
+    ctaLabel={t('shopSection.cta')}
+    ctaHref={localizePath(lang, '/contacto')}
+  />
+
+  <Gallery lang={lang} />
+  <LocationContact lang={lang} />
+  <CtaBanner lang={lang} />
+</BaseLayout>

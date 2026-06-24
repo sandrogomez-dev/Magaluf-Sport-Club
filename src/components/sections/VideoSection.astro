@@ -1,0 +1,63 @@
+---
+import { useTranslations, type Lang } from '../../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="relative overflow-hidden bg-navy text-white grain">
+  <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-2 lg:gap-16">
+    <div data-reveal>
+      <span class="eyebrow-line text-sm font-semibold uppercase tracking-[0.18em] text-gold">
+        {t('videoSection.eyebrow')}
+      </span>
+      <h2 class="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">
+        {t('videoSection.title')}
+      </h2>
+      <p class="mt-5 max-w-md text-lg leading-relaxed text-white/80">{t('videoSection.desc')}</p>
+    </div>
+
+    <div class="flex justify-center lg:justify-end" data-reveal>
+      <div class="relative aspect-[9/16] w-full max-w-[300px] overflow-hidden rounded-[1.75rem] bg-black shadow-2xl ring-4 ring-white/10">
+        <video
+          id="club-video"
+          class="h-full w-full object-cover"
+          playsinline
+          preload="none"
+          poster="/video/entrenamos-poster.jpg"
+          controls
+        >
+          <source src="/video/entrenamos.mp4" type="video/mp4" />
+        </video>
+        <button
+          id="club-video-play"
+          class="absolute inset-0 grid place-items-center bg-navy/25 transition-opacity hover:bg-navy/10"
+          aria-label="Play"
+        >
+          <span class="grid h-16 w-16 place-items-center rounded-full bg-gold text-navy shadow-xl transition-transform hover:scale-105">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const v = document.getElementById('club-video') as HTMLVideoElement | null;
+  const btn = document.getElementById('club-video-play') as HTMLButtonElement | null;
+  if (v && btn) {
+    btn.addEventListener('click', () => {
+      v.play();
+    });
+    v.addEventListener('play', () => {
+      btn.style.display = 'none';
+    });
+    v.addEventListener('pause', () => {
+      btn.style.display = 'grid';
+    });
+  }
+</script>

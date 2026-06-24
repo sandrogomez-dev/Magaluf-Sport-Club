@@ -1,0 +1,226 @@
+{
+  "meta": { "locale": "es-ES", "dir": "ltr" },
+  "nav": {
+    "home": "Inicio",
+    "padel": "Pádel",
+    "football": "Fútbol 7",
+    "events": "Eventos",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "common": {
+    "book": "Reservar",
+    "bookPlaytomic": "Reservar en Playtomic",
+    "bookCourt": "Reservar pista",
+    "tryClass": "Probar una clase",
+    "call": "Llamar",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "viewMore": "Saber más",
+    "getDirections": "Cómo llegar",
+    "menu": "Menú",
+    "close": "Cerrar",
+    "skipToContent": "Saltar al contenido"
+  },
+  "hero": {
+    "eyebrow": "Magaluf · Mallorca",
+    "title": "Tu club de pádel y deporte en Mallorca",
+    "subtitle": "7 pistas de pádel, campo de fútbol 7, café bar y eventos. Juega, entrena y disfruta a un paso de Magaluf, todo el año.",
+    "ctaPrimary": "Reservar pista",
+    "ctaSecondary": "Descubre el club"
+  },
+  "stats": {
+    "title": "El club de un vistazo",
+    "padel": "Pistas de pádel",
+    "football": "Campo de fútbol 7",
+    "cafe": "Café bar",
+    "kids": "Zona infantil"
+  },
+  "services": {
+    "title": "Todo lo que encontrarás",
+    "subtitle": "Mucho más que pádel: un club para jugar, competir y pasar el rato.",
+    "padel": {
+      "title": "Pádel",
+      "desc": "7 pistas, escuela para todas las edades y clases de todos los niveles."
+    },
+    "football": {
+      "title": "Fútbol 7",
+      "desc": "Campo de césped de última generación con iluminación nocturna y vestuarios."
+    },
+    "events": {
+      "title": "Eventos",
+      "desc": "Torneos, cumpleaños, despedidas y eventos de empresa a tu medida."
+    },
+    "cafe": {
+      "title": "Café bar",
+      "desc": "Toma algo antes o después de jugar. Terraza, ambiente y zona infantil."
+    },
+    "shop": {
+      "title": "Tienda",
+      "desc": "Palas, ropa y material de las mejores marcas, con asesoramiento."
+    }
+  },
+  "establishing": {
+    "eyebrow": "El club",
+    "title": "Un club al aire libre en el corazón de Magaluf"
+  },
+  "videoSection": {
+    "eyebrow": "Más que un alquiler",
+    "title": "No solo alquilamos palas. Entrenamos.",
+    "desc": "En Magaluf Sport Club no vienes solo a jugar, vienes a mejorar. Escuela, entrenos y comunidad. Te lo contamos en 25 segundos."
+  },
+  "classesSection": {
+    "eyebrow": "Escuela & Clases",
+    "title": "Aprende y mejora con nuestros profesores",
+    "desc": "Escuela de pádel para niños y adultos, con un equipo de profesores titulados. Clases individuales y en grupo, de la iniciación al perfeccionamiento.",
+    "features": [
+      "Profesores titulados",
+      "Para niños y adultos",
+      "Grupos reducidos",
+      "De iniciación a competición"
+    ],
+    "cta": "Reserva tu clase"
+  },
+  "shopSection": {
+    "eyebrow": "Tienda",
+    "title": "Tu tienda de pádel en el club",
+    "desc": "Las mejores marcas en palas, ropa y accesorios. Pruébalas y llévatelas el mismo día, con el asesoramiento de nuestro equipo.",
+    "features": [
+      "Palas de las mejores marcas",
+      "Ropa y calzado",
+      "Mochilas y accesorios"
+    ],
+    "cta": "Visítanos"
+  },
+  "padelSection": {
+    "eyebrow": "Pádel",
+    "title": "Juega al pádel todo el año",
+    "desc": "7 pistas en perfecto estado, escuela para niños y adultos y clases para todos los niveles. Reserva tu pista en segundos a través de Playtomic.",
+    "features": [
+      "7 pistas de pádel",
+      "Escuela para niños y adultos",
+      "Clases de iniciación a competición",
+      "Reserva online con Playtomic"
+    ],
+    "cta": "Reservar pista"
+  },
+  "footballSection": {
+    "eyebrow": "Fútbol 7",
+    "title": "Tu partido de fútbol 7, perfecto",
+    "desc": "Césped de última generación, iluminación nocturna y vestuarios equipados. Reúne a tu equipo y juega de día o de noche.",
+    "features": [
+      "Césped de última generación",
+      "Iluminación nocturna",
+      "Vestuarios equipados",
+      "Ideal para grupos y empresas"
+    ],
+    "cta": "Reservar campo"
+  },
+  "holidays": {
+    "eyebrow": "Mallorca Padel Experience",
+    "title": "Padel Holidays en Mallorca",
+    "desc": "7 días y 6 noches en hotel con media pensión, entrenos diarios con coach y partidos supervisados. La forma perfecta de combinar pádel y vacaciones al sol.",
+    "includes": [
+      "7 días / 6 noches en hotel 4★ con spa",
+      "Media pensión",
+      "1h diaria de entreno con coach (máx. 4 por pista)",
+      "1,5h de partidos supervisados"
+    ],
+    "priceFrom": "Desde",
+    "perPerson": "por persona",
+    "priceNote": "600 € (mar–may, oct) · 750 € (jun, sep)",
+    "cta": "Solicitar información"
+  },
+  "gallery": {
+    "title": "El ambiente del club",
+    "subtitle": "Así se vive el deporte en Magaluf Sport Club."
+  },
+  "events": {
+    "eyebrow": "Eventos",
+    "title": "Torneos, celebraciones y mucho más",
+    "desc": "Desde torneos de pádel y ligas para peques hasta cumpleaños, despedidas y eventos de empresa. Lo organizamos por ti.",
+    "tournaments": "Torneos y ligas",
+    "kids": "Eventos infantiles",
+    "parties": "Cumpleaños y grupos",
+    "company": "Eventos de empresa",
+    "cta": "Organiza tu evento"
+  },
+  "location": {
+    "title": "Dónde estamos",
+    "hoursTitle": "Horario",
+    "weekdays": "Lunes a viernes",
+    "saturday": "Sábado",
+    "sundayNote": "Sábado tarde y domingo bajo petición.",
+    "addressTitle": "Dirección",
+    "contactTitle": "Contacto"
+  },
+  "ctaBanner": {
+    "title": "¿Listo para jugar?",
+    "desc": "Reserva tu pista de pádel o tu campo de fútbol 7 en segundos.",
+    "primary": "Reservar ahora",
+    "secondary": "Contactar"
+  },
+  "footer": {
+    "tagline": "Tu club de pádel, fútbol 7 y eventos en Magaluf, Mallorca.",
+    "explore": "Explorar",
+    "contact": "Contacto",
+    "follow": "Síguenos",
+    "rights": "Todos los derechos reservados.",
+    "disclaimer": "Web prototipo. Imágenes y datos pendientes de validación con el cliente."
+  },
+  "pages": {
+    "padel": {
+      "title": "Pádel en Magaluf",
+      "intro": "7 pistas, escuela y clases para todos los niveles. Reserva en segundos."
+    },
+    "football": {
+      "title": "Fútbol 7",
+      "intro": "Césped de última generación, luz nocturna y vestuarios. Reúne a tu equipo."
+    },
+    "events": {
+      "title": "Eventos y torneos",
+      "intro": "Torneos, ligas infantiles, cumpleaños y eventos de empresa."
+    },
+    "about": {
+      "title": "Sobre el club",
+      "intro": "Un club deportivo con alma de comunidad en el corazón de Magaluf.",
+      "body": "Magaluf Sport Club es mucho más que pádel: 7 pistas, campo de fútbol 7, café bar y zona infantil en un mismo sitio. Un lugar para jugar, competir y disfrutar en familia o con amigos, todo el año.",
+      "values": [
+        { "title": "Comunidad", "desc": "Un club donde se hace equipo dentro y fuera de la pista." },
+        { "title": "Para todos", "desc": "Niños, adultos, principiantes y competidores." },
+        { "title": "Todo el año", "desc": "Buen clima de Mallorca y un club abierto cada día." }
+      ]
+    },
+    "contact": {
+      "title": "Contacto",
+      "intro": "¿Dudas, reservas o eventos? Hablamos.",
+      "reachUs": "Cómo contactarnos"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Magaluf Sport Club | Pádel, Fútbol 7 y Eventos en Mallorca",
+      "description": "Club deportivo en Magaluf, Mallorca: 7 pistas de pádel, campo de fútbol 7, escuela, café bar y eventos. Reserva tu pista online."
+    },
+    "padel": {
+      "title": "Pádel en Magaluf | 7 pistas, escuela y clases — Magaluf Sport Club",
+      "description": "7 pistas de pádel en Magaluf, escuela para niños y adultos y clases para todos los niveles. Reserva online con Playtomic."
+    },
+    "football": {
+      "title": "Fútbol 7 en Magaluf | Magaluf Sport Club",
+      "description": "Campo de fútbol 7 con césped de última generación, iluminación nocturna y vestuarios en Magaluf, Mallorca."
+    },
+    "events": {
+      "title": "Eventos y torneos | Magaluf Sport Club",
+      "description": "Torneos de pádel, ligas infantiles, cumpleaños, despedidas y eventos de empresa en Magaluf, Mallorca."
+    },
+    "about": {
+      "title": "Sobre nosotros | Magaluf Sport Club",
+      "description": "Conoce Magaluf Sport Club: pádel, fútbol 7, café bar y zona infantil en el corazón de Magaluf, Mallorca."
+    },
+    "contact": {
+      "title": "Contacto | Magaluf Sport Club",
+      "description": "Contacta con Magaluf Sport Club: teléfono, email, horario y ubicación en Magaluf, Mallorca."
+    }
+  }
+}

@@ -1,0 +1,91 @@
+---
+import { useTranslations, type Lang } from '../../i18n/ui';
+import { club } from '../../content/club';
+
+interface Props {
+  lang: Lang;
+  /** Flota sobre la sección anterior (úsalo solo tras el hero). */
+  float?: boolean;
+}
+const { lang, float = false } = Astro.props;
+const t = useTranslations(lang);
+
+// icon: clave SVG inline (set mínimo, sin emojis)
+const stats = [
+  { count: club.facilities.padelCourts, label: t('stats.padel'), icon: 'padel' },
+  { count: club.facilities.football7, label: t('stats.football'), icon: 'ball' },
+  { count: null, label: t('stats.cafe'), icon: 'coffee' },
+  { count: null, label: t('stats.kids'), icon: 'kids' },
+];
+
+const icons: Record<string, string> = {
+  padel:
+    '<circle cx="12" cy="9" r="6"/><path d="M12 15v6"/><path d="M9 21h6"/><circle cx="12" cy="9" r="1.5" fill="currentColor" stroke="none"/>',
+  ball: '<circle cx="12" cy="12" r="9"/><path d="m12 7 2.5 1.8-1 3h-3l-1-3z"/>',
+  coffee:
+    '<path d="M17 8h1a3 3 0 0 1 0 6h-1"/><path d="M3 8h14v6a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/><path d="M6 2v2M10 2v2M14 2v2"/>',
+  kids: '<circle cx="12" cy="5" r="2"/><path d="M12 7v6M8 21l4-8 4 8M6 11h12"/>',
+};
+---
+
+<section class={`relative bg-surface ${float ? '' : 'py-16 sm:py-20'}`}>
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <div
+      class={`relative z-20 grid grid-cols-2 gap-px overflow-hidden rounded-[1.5rem] bg-line shadow-2xl shadow-navy/10 md:grid-cols-4 ${
+        float ? '-mt-16 sm:-mt-20' : ''
+      }`}
+      data-reveal
+    >
+      {
+        stats.map((s) => (
+          <div class="flex flex-col items-center gap-2 bg-white px-4 py-8 text-center">
+            <span class="text-sage">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" set:html={icons[s.icon]} />
+            </span>
+            {s.count !== null ? (
+              <span class="font-display text-4xl font-extrabold text-gold sm:text-5xl" data-count={s.count}>0</span>
+            ) : (
+              <span class="font-display text-2xl font-extrabold text-navy sm:text-3xl">✓</span>
+            )}
+            <span class="text-xs font-semibold uppercase tracking-wide text-muted">{s.label}</span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  {float && <div class="h-12"></div>}
+</section>
+
+<script>
+  // Count-up al entrar en viewport
+  const nums = document.querySelectorAll<HTMLElement>('[data-count]');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          const el = e.target as HTMLElement;
+          const target = Number(el.dataset.count || '0');
+          const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          if (reduce || target <= 1) {
+            el.textContent = String(target);
+          } else {
+            const dur = 900;
+            const start = performance.now();
+            const tick = (now: number) => {
+              const p = Math.min((now - start) / dur, 1);
+              el.textContent = String(Math.round(target * (1 - Math.pow(1 - p, 3))));
+              if (p < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+          }
+          io.unobserve(el);
+        });
+      },
+      { threshold: 0.5 },
+    );
+    nums.forEach((n) => io.observe(n));
+  } else {
+    nums.forEach((n) => (n.textContent = n.dataset.count || '0'));
+  }
+</script>

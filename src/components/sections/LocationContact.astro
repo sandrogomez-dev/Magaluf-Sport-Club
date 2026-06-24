@@ -1,0 +1,59 @@
+---
+import Section from '../ui/Section.astro';
+import Icon from '../ui/Icon.astro';
+import { useTranslations, type Lang } from '../../i18n/ui';
+import { club } from '../../content/club';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<Section id="contacto" bg="white">
+  <div class="grid gap-10 lg:grid-cols-2 lg:gap-14">
+    <div data-reveal>
+      <span class="text-sm font-semibold uppercase tracking-widest text-brand">{t('location.contactTitle')}</span>
+      <h2 class="mt-3 text-3xl font-bold sm:text-4xl">{t('location.title')}</h2>
+
+      <dl class="mt-8 space-y-6">
+        <div>
+          <dt class="font-display font-bold text-ink">{t('location.hoursTitle')}</dt>
+          <dd class="mt-2 text-muted">
+            <div class="flex justify-between border-b border-line py-1.5"><span>{t('location.weekdays')}</span><span class="font-medium text-ink">{club.hours.weekdays}</span></div>
+            <div class="flex justify-between border-b border-line py-1.5"><span>{t('location.saturday')}</span><span class="font-medium text-ink">{club.hours.saturday}</span></div>
+            <p class="mt-2 text-sm">{t('location.sundayNote')}</p>
+          </dd>
+        </div>
+        <div>
+          <dt class="font-display font-bold text-ink">{t('location.addressTitle')}</dt>
+          <dd class="mt-1 text-muted">{club.address}</dd>
+        </div>
+      </dl>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href={`tel:${club.phone}`} class="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-dark">
+          <Icon name="phone" size={18} /> {t('common.call')}
+        </a>
+        <a href={`https://wa.me/${club.whatsapp}`} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-surface px-6 py-3 font-semibold text-ink ring-1 ring-line transition-colors hover:ring-brand">
+          <Icon name="whatsapp" size={18} /> {t('common.whatsapp')}
+        </a>
+        <a href={club.mapsLink} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 font-semibold text-navy transition-colors hover:bg-accent-dark">
+          <Icon name="pin" size={18} /> {t('common.getDirections')}
+        </a>
+      </div>
+    </div>
+
+    <div class="overflow-hidden rounded-[1.5rem] shadow-xl ring-1 ring-line" data-reveal>
+      <iframe
+        src={club.mapsEmbed}
+        title="Mapa Magaluf Sport Club"
+        class="h-full min-h-[360px] w-full"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</Section>

@@ -1,0 +1,7 @@
+# Configuración para Netlify (Vercel detecta Astro automáticamente y no necesita archivo).
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"

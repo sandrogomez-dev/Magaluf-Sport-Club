@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/sections/PageIntro.astro';
+import FeatureSplit from '../../components/sections/FeatureSplit.astro';
+import Gallery from '../../components/sections/Gallery.astro';
+import CtaBanner from '../../components/sections/CtaBanner.astro';
+import { languages, useTranslations, getDict, localizePath, type Lang } from '../../i18n/ui';
+import { club } from '../../content/club';
+
+export function getStaticPaths() {
+  return (Object.keys(languages) as Lang[]).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params as { lang: Lang };
+const t = useTranslations(lang);
+const dict = getDict(lang);
+---
+
+<BaseLayout lang={lang} title={dict.seo.padel.title} description={dict.seo.padel.description}>
+  <PageIntro eyebrow={t('nav.padel')} title={dict.pages.padel.title} intro={dict.pages.padel.intro} image="padel-women-action.jpg" />
+
+  <FeatureSplit
+    eyebrow={t('padelSection.eyebrow')}
+    title={t('padelSection.title')}
+    desc={t('padelSection.desc')}
+    features={dict.padelSection.features}
+    image="padel-coaching.jpg"
+    badgeValue="7"
+    badgeLabel={t('stats.padel')}
+    ctaLabel={t('padelSection.cta')}
+    ctaHref={club.booking}
+    ctaExternal
+  />
+
+  <FeatureSplit
+    eyebrow={t('classesSection.eyebrow')}
+    title={t('classesSection.title')}
+    desc={t('classesSection.desc')}
+    features={dict.classesSection.features}
+    image="coaches.jpg"
+    reverse
+    bg="surface"
+    ctaLabel={t('classesSection.cta')}
+    ctaHref={localizePath(lang, '/contacto')}
+  />
+
+  <Gallery lang={lang} />
+  <CtaBanner lang={lang} />
+</BaseLayout>

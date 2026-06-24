@@ -1,0 +1,226 @@
+{
+  "meta": { "locale": "en-GB", "dir": "ltr" },
+  "nav": {
+    "home": "Home",
+    "padel": "Padel",
+    "football": "7-a-side",
+    "events": "Events",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "common": {
+    "book": "Book",
+    "bookPlaytomic": "Book on Playtomic",
+    "bookCourt": "Book a court",
+    "tryClass": "Try a class",
+    "call": "Call",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "viewMore": "Learn more",
+    "getDirections": "Get directions",
+    "menu": "Menu",
+    "close": "Close",
+    "skipToContent": "Skip to content"
+  },
+  "hero": {
+    "eyebrow": "Magaluf · Mallorca",
+    "title": "Your padel & sports club in Mallorca",
+    "subtitle": "7 padel courts, a 7-a-side football pitch, café bar and events. Play, train and enjoy just steps from Magaluf, all year round.",
+    "ctaPrimary": "Book a court",
+    "ctaSecondary": "Discover the club"
+  },
+  "stats": {
+    "title": "The club at a glance",
+    "padel": "Padel courts",
+    "football": "7-a-side pitch",
+    "cafe": "Café bar",
+    "kids": "Kids area"
+  },
+  "services": {
+    "title": "Everything you'll find here",
+    "subtitle": "Much more than padel: a club to play, compete and hang out.",
+    "padel": {
+      "title": "Padel",
+      "desc": "7 courts, a school for all ages and classes for every level."
+    },
+    "football": {
+      "title": "7-a-side football",
+      "desc": "State-of-the-art turf pitch with floodlights and changing rooms."
+    },
+    "events": {
+      "title": "Events",
+      "desc": "Tournaments, birthdays, stag/hen dos and corporate events, made to measure."
+    },
+    "cafe": {
+      "title": "Café bar",
+      "desc": "Grab a drink before or after your game. Terrace, atmosphere and kids area."
+    },
+    "shop": {
+      "title": "Shop",
+      "desc": "Rackets, clothing and gear from the top brands, with expert advice."
+    }
+  },
+  "establishing": {
+    "eyebrow": "The club",
+    "title": "An open-air club in the heart of Magaluf"
+  },
+  "videoSection": {
+    "eyebrow": "More than rental",
+    "title": "We don't just rent rackets. We coach.",
+    "desc": "At Magaluf Sport Club you don't just come to play, you come to improve. School, coaching and community. We tell you in 25 seconds."
+  },
+  "classesSection": {
+    "eyebrow": "School & Classes",
+    "title": "Learn and improve with our coaches",
+    "desc": "Padel school for kids and adults, with a team of qualified coaches. Private and group classes, from beginner to advanced.",
+    "features": [
+      "Qualified coaches",
+      "For kids and adults",
+      "Small groups",
+      "From beginner to competition"
+    ],
+    "cta": "Book your class"
+  },
+  "shopSection": {
+    "eyebrow": "Shop",
+    "title": "Your padel shop at the club",
+    "desc": "The best brands in rackets, clothing and accessories. Try them and take them home the same day, with advice from our team.",
+    "features": [
+      "Rackets from top brands",
+      "Clothing and footwear",
+      "Bags and accessories"
+    ],
+    "cta": "Visit us"
+  },
+  "padelSection": {
+    "eyebrow": "Padel",
+    "title": "Play padel all year round",
+    "desc": "7 courts in top condition, a school for kids and adults and classes for every level. Book your court in seconds with Playtomic.",
+    "features": [
+      "7 padel courts",
+      "School for kids and adults",
+      "Classes from beginner to competition",
+      "Online booking with Playtomic"
+    ],
+    "cta": "Book a court"
+  },
+  "footballSection": {
+    "eyebrow": "7-a-side",
+    "title": "Your 7-a-side game, sorted",
+    "desc": "State-of-the-art turf, floodlights and fully equipped changing rooms. Get your team together and play day or night.",
+    "features": [
+      "State-of-the-art turf",
+      "Floodlights for night games",
+      "Equipped changing rooms",
+      "Perfect for groups and companies"
+    ],
+    "cta": "Book the pitch"
+  },
+  "holidays": {
+    "eyebrow": "Mallorca Padel Experience",
+    "title": "Padel Holidays in Mallorca",
+    "desc": "7 days and 6 nights at a hotel with half board, daily coaching and supervised matches. The perfect way to mix padel with a holiday in the sun.",
+    "includes": [
+      "7 days / 6 nights at a 4★ hotel with spa",
+      "Half board",
+      "1h daily coaching (max. 4 per court)",
+      "1.5h of supervised matches"
+    ],
+    "priceFrom": "From",
+    "perPerson": "per person",
+    "priceNote": "€600 (Mar–May, Oct) · €750 (Jun, Sep)",
+    "cta": "Request information"
+  },
+  "gallery": {
+    "title": "The club atmosphere",
+    "subtitle": "This is how sport feels at Magaluf Sport Club."
+  },
+  "events": {
+    "eyebrow": "Events",
+    "title": "Tournaments, celebrations and more",
+    "desc": "From padel tournaments and kids' leagues to birthdays, stag/hen dos and corporate events. We organise it for you.",
+    "tournaments": "Tournaments & leagues",
+    "kids": "Kids' events",
+    "parties": "Birthdays & groups",
+    "company": "Corporate events",
+    "cta": "Plan your event"
+  },
+  "location": {
+    "title": "Where we are",
+    "hoursTitle": "Opening hours",
+    "weekdays": "Monday to Friday",
+    "saturday": "Saturday",
+    "sundayNote": "Saturday afternoon and Sunday on request.",
+    "addressTitle": "Address",
+    "contactTitle": "Contact"
+  },
+  "ctaBanner": {
+    "title": "Ready to play?",
+    "desc": "Book your padel court or 7-a-side pitch in seconds.",
+    "primary": "Book now",
+    "secondary": "Contact us"
+  },
+  "footer": {
+    "tagline": "Your padel, 7-a-side and events club in Magaluf, Mallorca.",
+    "explore": "Explore",
+    "contact": "Contact",
+    "follow": "Follow us",
+    "rights": "All rights reserved.",
+    "disclaimer": "Prototype website. Images and details pending client validation."
+  },
+  "pages": {
+    "padel": {
+      "title": "Padel in Magaluf",
+      "intro": "7 courts, a school and classes for all levels. Book in seconds."
+    },
+    "football": {
+      "title": "7-a-side football",
+      "intro": "State-of-the-art turf, floodlights and changing rooms. Get your team together."
+    },
+    "events": {
+      "title": "Events & tournaments",
+      "intro": "Tournaments, kids' leagues, birthdays and corporate events."
+    },
+    "about": {
+      "title": "About the club",
+      "intro": "A sports club with a community soul in the heart of Magaluf.",
+      "body": "Magaluf Sport Club is much more than padel: 7 courts, a 7-a-side football pitch, café bar and kids area all in one place. A spot to play, compete and enjoy with family or friends, all year round.",
+      "values": [
+        { "title": "Community", "desc": "A club where you build a team on and off the court." },
+        { "title": "For everyone", "desc": "Kids, adults, beginners and competitors." },
+        { "title": "All year round", "desc": "Mallorca's great weather and a club open every day." }
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "intro": "Questions, bookings or events? Let's talk.",
+      "reachUs": "How to reach us"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Magaluf Sport Club | Padel, 7-a-side & Events in Mallorca",
+      "description": "Sports club in Magaluf, Mallorca: 7 padel courts, a 7-a-side football pitch, school, café bar and events. Book your court online."
+    },
+    "padel": {
+      "title": "Padel in Magaluf | 7 courts, school & classes — Magaluf Sport Club",
+      "description": "7 padel courts in Magaluf, a school for kids and adults and classes for all levels. Book online with Playtomic."
+    },
+    "football": {
+      "title": "7-a-side football in Magaluf | Magaluf Sport Club",
+      "description": "7-a-side football pitch with state-of-the-art turf, floodlights and changing rooms in Magaluf, Mallorca."
+    },
+    "events": {
+      "title": "Events & tournaments | Magaluf Sport Club",
+      "description": "Padel tournaments, kids' leagues, birthdays, stag/hen dos and corporate events in Magaluf, Mallorca."
+    },
+    "about": {
+      "title": "About us | Magaluf Sport Club",
+      "description": "Discover Magaluf Sport Club: padel, 7-a-side football, café bar and kids area in the heart of Magaluf, Mallorca."
+    },
+    "contact": {
+      "title": "Contact | Magaluf Sport Club",
+      "description": "Get in touch with Magaluf Sport Club: phone, email, opening hours and location in Magaluf, Mallorca."
+    }
+  }
+}

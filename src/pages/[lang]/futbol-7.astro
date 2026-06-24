@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/sections/PageIntro.astro';
+import FeatureSplit from '../../components/sections/FeatureSplit.astro';
+import CtaBanner from '../../components/sections/CtaBanner.astro';
+import { languages, useTranslations, getDict, type Lang } from '../../i18n/ui';
+import { club } from '../../content/club';
+
+export function getStaticPaths() {
+  return (Object.keys(languages) as Lang[]).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params as { lang: Lang };
+const t = useTranslations(lang);
+const dict = getDict(lang);
+---
+
+<BaseLayout lang={lang} title={dict.seo.football.title} description={dict.seo.football.description}>
+  <PageIntro eyebrow={t('nav.football')} title={dict.pages.football.title} intro={dict.pages.football.intro} image="football-aerial.jpg" />
+
+  <FeatureSplit
+    eyebrow={t('footballSection.eyebrow')}
+    title={t('footballSection.title')}
+    desc={t('footballSection.desc')}
+    features={dict.footballSection.features}
+    image="football-aerial.jpg"
+    ctaLabel={t('footballSection.cta')}
+    ctaHref={club.booking}
+    ctaExternal
+  />
+
+  <CtaBanner lang={lang} />
+</BaseLayout>

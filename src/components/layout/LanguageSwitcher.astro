@@ -1,0 +1,32 @@
+---
+import { languages, getPathWithoutLang, localizePath, type Lang } from '../../i18n/ui';
+import Flag from '../ui/Flag.astro';
+
+interface Props {
+  lang: Lang;
+  url: URL;
+  class?: string;
+}
+
+const { lang, url, class: className = '' } = Astro.props;
+const basePath = getPathWithoutLang(url);
+const codes = Object.keys(languages) as Lang[];
+---
+
+<div class={`flex items-center gap-1 text-sm font-semibold ${className}`} aria-label="Idioma / Language">
+  {
+    codes.map((code) => (
+      <a
+        href={localizePath(code, basePath)}
+        hreflang={code}
+        aria-current={code === lang ? 'true' : undefined}
+        class={`flex items-center gap-1.5 rounded-full px-2 py-1 uppercase transition-colors ${
+          code === lang ? 'bg-gold text-navy' : 'opacity-70 hover:opacity-100 hover:text-gold'
+        }`}
+      >
+        <Flag code={code} class="h-3 w-[18px] ring-1 ring-black/10" />
+        {code}
+      </a>
+    ))
+  }
+</div>

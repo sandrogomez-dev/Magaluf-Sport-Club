@@ -1,0 +1,23 @@
+---
+interface Props {
+  id?: string;
+  class?: string;
+  containerClass?: string;
+  bg?: 'white' | 'surface' | 'brand' | 'ink';
+}
+
+const { id, class: className = '', containerClass = '', bg = 'white' } = Astro.props;
+
+const bgs: Record<string, string> = {
+  white: 'bg-white text-ink',
+  surface: 'bg-surface text-ink',
+  brand: 'bg-brand text-white',
+  ink: 'bg-ink text-white',
+};
+---
+
+<section id={id} class={`py-20 sm:py-28 ${bgs[bg]} ${className}`}>
+  <div class={`mx-auto w-full max-w-6xl px-5 sm:px-8 ${containerClass}`}>
+    <slot />
+  </div>
+</section>

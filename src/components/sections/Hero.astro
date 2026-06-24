@@ -1,0 +1,109 @@
+---
+import { Image } from 'astro:assets';
+import { useTranslations, type Lang } from '../../i18n/ui';
+import { club } from '../../content/club';
+import { img } from '../../lib/images';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const marquee = [
+  `7 ${t('stats.padel')}`,
+  t('stats.football'),
+  t('stats.cafe'),
+  t('stats.kids'),
+  t('nav.events'),
+];
+---
+
+<section class="relative flex min-h-[100svh] items-center overflow-hidden bg-navy grain">
+  <!-- Imagen de fondo con parallax -->
+  <div id="hero-bg" class="absolute inset-0 will-change-transform">
+    <Image
+      src={img('aerial-hero.jpg')}
+      alt=""
+      widths={[768, 1280, 1920, 2400]}
+      sizes="100vw"
+      class="h-[115%] w-full object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+  </div>
+  <div class="absolute inset-0 bg-gradient-to-br from-navy via-navy/75 to-navy/40"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent"></div>
+
+  <div class="relative mx-auto w-full max-w-6xl px-5 pt-28 pb-28 sm:px-8">
+    <div class="max-w-3xl text-white" data-reveal>
+      <span class="eyebrow-line text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+        {t('hero.eyebrow')}
+      </span>
+      <h1 class="mt-6 text-5xl font-extrabold leading-[0.95] sm:text-6xl md:text-7xl">
+        {t('hero.title')}
+      </h1>
+      <p class="mt-7 max-w-xl text-lg leading-relaxed text-white/85 sm:text-xl">
+        {t('hero.subtitle')}
+      </p>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a
+          href={club.booking}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-lg font-display font-bold text-navy shadow-xl shadow-gold/25 transition-all hover:-translate-y-0.5 hover:bg-accent-dark"
+        >
+          {t('hero.ctaPrimary')}
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a
+          href="#servicios"
+          class="inline-flex items-center justify-center rounded-full bg-white/10 px-8 py-4 text-lg font-display font-semibold text-white ring-1 ring-white/25 backdrop-blur transition-all hover:bg-white/20"
+        >
+          {t('hero.ctaSecondary')}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Marquee inferior -->
+  <div class="absolute inset-x-0 bottom-0 border-t border-white/10 bg-navy/40 py-4 backdrop-blur-sm">
+    <div class="marquee" aria-hidden="true">
+      {
+        [0, 1].map(() => (
+          <div class="marquee__track">
+            {marquee.map((item) => (
+              <span class="flex items-center gap-3 font-display text-sm font-semibold uppercase tracking-widest text-white/70">
+                {item}
+                <span class="text-gold">✦</span>
+              </span>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  // Parallax sutil del fondo del hero
+  const bg = document.getElementById('hero-bg');
+  if (bg && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let ticking = false;
+    const update = () => {
+      const y = window.scrollY;
+      if (y < window.innerHeight) bg.style.transform = `translate3d(0, ${y * 0.25}px, 0)`;
+      ticking = false;
+    };
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (!ticking) {
+          requestAnimationFrame(update);
+          ticking = true;
+        }
+      },
+      { passive: true },
+    );
+  }
+</script>

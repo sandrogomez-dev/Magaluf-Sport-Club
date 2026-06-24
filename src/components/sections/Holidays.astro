@@ -1,0 +1,60 @@
+---
+import { Image } from 'astro:assets';
+import { useTranslations, getDict, localizePath, type Lang } from '../../i18n/ui';
+import { club } from '../../content/club';
+import { img } from '../../lib/images';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const list: string[] = getDict(lang).holidays.includes;
+---
+
+<section class="relative overflow-hidden bg-ink text-white">
+  <Image
+    src={img('padel-women-action.jpg')}
+    alt=""
+    widths={[768, 1280]}
+    sizes="100vw"
+    class="absolute inset-0 h-full w-full object-cover opacity-20"
+  />
+  <div class="relative mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-2">
+    <div data-reveal>
+      <span class="inline-block rounded-full bg-accent px-4 py-1.5 text-sm font-bold uppercase tracking-widest text-ink">
+        {t('holidays.eyebrow')}
+      </span>
+      <h2 class="mt-5 text-3xl font-extrabold sm:text-4xl md:text-5xl">{t('holidays.title')}</h2>
+      <p class="mt-5 max-w-lg text-lg leading-relaxed text-white/80">{t('holidays.desc')}</p>
+
+      <ul class="mt-7 space-y-3">
+        {list.map((f) => (
+          <li class="flex items-start gap-3">
+            <span class="mt-0.5 text-accent">✦</span>
+            <span class="text-white/90">{f}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="lg:justify-self-end" data-reveal>
+      <div class="w-full max-w-sm rounded-[1.5rem] bg-white p-8 text-ink shadow-2xl">
+        <p class="text-sm font-semibold uppercase tracking-widest text-brand">{t('holidays.priceFrom')}</p>
+        <div class="mt-1 flex items-end gap-2">
+          <span class="font-display text-6xl font-extrabold">{club.holidays.priceLow}{club.holidays.currency}</span>
+          <span class="mb-2 text-muted">/ {t('holidays.perPerson')}</span>
+        </div>
+        <p class="mt-2 text-sm text-muted">{t('holidays.priceNote')}</p>
+        <div class="my-6 h-px bg-line"></div>
+        <p class="text-sm text-ink/80">{club.holidays.days} {lang === 'de' ? 'Tage' : lang === 'en' ? 'days' : 'días'} · {club.holidays.hotel}</p>
+        <a
+          href={localizePath(lang, '/contacto')}
+          class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-brand px-6 py-3.5 font-display font-semibold text-white transition-colors hover:bg-brand-dark"
+        >
+          {t('holidays.cta')}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

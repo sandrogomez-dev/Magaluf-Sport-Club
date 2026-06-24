@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/sections/PageIntro.astro';
+import LocationContact from '../../components/sections/LocationContact.astro';
+import CtaBanner from '../../components/sections/CtaBanner.astro';
+import { languages, useTranslations, getDict, type Lang } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return (Object.keys(languages) as Lang[]).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params as { lang: Lang };
+const t = useTranslations(lang);
+const dict = getDict(lang);
+---
+
+<BaseLayout lang={lang} title={dict.seo.contact.title} description={dict.seo.contact.description}>
+  <PageIntro eyebrow={t('nav.contact')} title={dict.pages.contact.title} intro={dict.pages.contact.intro} image="terrace-night.jpg" />
+  <LocationContact lang={lang} />
+  <CtaBanner lang={lang} />
+</BaseLayout>

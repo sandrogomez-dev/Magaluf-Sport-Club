@@ -1,0 +1,97 @@
+---
+import { Image } from 'astro:assets';
+import Icon from '../ui/Icon.astro';
+import { img, hasImg } from '../../lib/images';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  desc: string;
+  features?: string[];
+  image: string;
+  reverse?: boolean;
+  ctaLabel?: string;
+  ctaHref?: string;
+  ctaExternal?: boolean;
+  bg?: 'white' | 'surface';
+  badgeValue?: string;
+  badgeLabel?: string;
+}
+
+const {
+  eyebrow,
+  title,
+  desc,
+  features = [],
+  image,
+  reverse = false,
+  ctaLabel,
+  ctaHref,
+  ctaExternal = false,
+  bg = 'white',
+  badgeValue,
+  badgeLabel,
+} = Astro.props;
+---
+
+<section class={bg === 'surface' ? 'bg-surface' : 'bg-white'}>
+  <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-5 lg:gap-16">
+    <!-- Imagen (3/5) -->
+    <div class={`relative ${reverse ? 'lg:order-2 lg:col-span-3' : 'lg:col-span-3'}`} data-reveal>
+      <div class="relative overflow-hidden rounded-[1.5rem] shadow-2xl shadow-navy/15">
+        {hasImg(image) ? (
+          <Image
+            src={img(image)}
+            alt={title}
+            widths={[500, 900, 1100]}
+            sizes="(min-width:1024px) 55vw, 100vw"
+            class="aspect-[5/4] w-full object-cover"
+          />
+        ) : (
+          <div class="grid aspect-[5/4] w-full place-items-center bg-gradient-to-br from-navy via-brand-light to-navy text-white/70">
+            <span class="text-sm">Foto pendiente</span>
+          </div>
+        )}
+      </div>
+
+      {badgeValue && (
+        <div class={`absolute -bottom-5 ${reverse ? '-left-3 sm:-left-6' : '-right-3 sm:-right-6'} flex items-center gap-3 rounded-2xl bg-white px-5 py-4 shadow-xl ring-1 ring-line`}>
+          <span class="font-display text-4xl font-extrabold text-gold">{badgeValue}</span>
+          {badgeLabel && <span class="max-w-[6rem] text-xs font-semibold uppercase leading-tight tracking-wide text-muted">{badgeLabel}</span>}
+        </div>
+      )}
+    </div>
+
+    <!-- Texto (2/5) -->
+    <div class={reverse ? 'lg:order-1 lg:col-span-2' : 'lg:col-span-2'} data-reveal>
+      <span class="eyebrow-line text-sm font-semibold uppercase tracking-[0.18em] text-brand">{eyebrow}</span>
+      <h2 class="mt-4 text-3xl font-bold sm:text-4xl">{title}</h2>
+      <p class="mt-5 text-lg leading-relaxed text-muted">{desc}</p>
+
+      {features.length > 0 && (
+        <ul class="mt-7 space-y-3">
+          {features.map((f) => (
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand/10 text-brand">
+                <Icon name="check" size={14} />
+              </span>
+              <span class="text-ink/90">{f}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {ctaLabel && ctaHref && (
+        <a
+          href={ctaHref}
+          target={ctaExternal ? '_blank' : undefined}
+          rel={ctaExternal ? 'noopener noreferrer' : undefined}
+          class="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-brand px-7 py-3.5 font-display font-semibold text-white shadow-lg shadow-brand/20 transition-all hover:-translate-y-0.5 hover:bg-brand-dark"
+        >
+          {ctaLabel}
+          <Icon name="arrow" size={18} />
+        </a>
+      )}
+    </div>
+  </div>
+</section>
