@@ -29,7 +29,7 @@ const field =
     </div>
 
     <form
-      name="contact"
+      name={`contact-${lang}`}
       method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field"
@@ -37,7 +37,7 @@ const field =
       class="lg:col-span-3 rounded-[1.5rem] bg-surface p-6 ring-1 ring-line sm:p-8"
       data-reveal
     >
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value={`contact-${lang}`} />
       <p class="hidden"><label>No rellenar: <input name="bot-field" /></label></p>
 
       <div class="grid gap-4 sm:grid-cols-2">
