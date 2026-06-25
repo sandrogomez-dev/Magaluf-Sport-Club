@@ -13,6 +13,7 @@ export const club = {
   booking: 'https://playtomic.com/clubs/magaluf-sport-club',
   instagram: 'https://www.instagram.com/magalufsportclub/',
   website: 'https://magalufsportclub.com',
+  mpe: 'https://mallorcapadelexperience.com',
 
   address: 'Av. Pere Vaquer, 47, 07181 Magaluf, Illes Balears',
   mapsEmbed:

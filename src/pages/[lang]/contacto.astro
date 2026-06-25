@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageIntro from '../../components/sections/PageIntro.astro';
+import ContactForm from '../../components/sections/ContactForm.astro';
 import LocationContact from '../../components/sections/LocationContact.astro';
 import CtaBanner from '../../components/sections/CtaBanner.astro';
 import { languages, useTranslations, getDict, type Lang } from '../../i18n/ui';
@@ -15,6 +16,7 @@ const dict = getDict(lang);
 
 <BaseLayout lang={lang} title={dict.seo.contact.title} description={dict.seo.contact.description}>
   <PageIntro eyebrow={t('nav.contact')} title={dict.pages.contact.title} intro={dict.pages.contact.intro} image="terrace-night.jpg" />
+  <ContactForm lang={lang} />
   <LocationContact lang={lang} />
   <CtaBanner lang={lang} />
 </BaseLayout>

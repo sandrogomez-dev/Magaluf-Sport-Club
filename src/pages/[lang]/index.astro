@@ -11,6 +11,7 @@ import Holidays from '../../components/sections/Holidays.astro';
 import EventsTeaser from '../../components/sections/EventsTeaser.astro';
 import Gallery from '../../components/sections/Gallery.astro';
 import Testimonials from '../../components/sections/Testimonials.astro';
+import BrandFamily from '../../components/sections/BrandFamily.astro';
 import LocationContact from '../../components/sections/LocationContact.astro';
 import CtaBanner from '../../components/sections/CtaBanner.astro';
 import { languages, useTranslations, getDict, localizePath, type Lang } from '../../i18n/ui';
@@ -87,6 +88,7 @@ const dict = getDict(lang);
 
   <Gallery lang={lang} />
   <Testimonials lang={lang} />
+  <BrandFamily lang={lang} />
   <LocationContact lang={lang} />
   <CtaBanner lang={lang} />
 </BaseLayout>

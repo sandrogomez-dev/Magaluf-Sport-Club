@@ -224,6 +224,29 @@
       "reachUs": "Cómo contactarnos"
     }
   },
+  "form": {
+    "title": "Escríbenos",
+    "intro": "Cuéntanos qué necesitas y te respondemos enseguida.",
+    "name": "Nombre",
+    "email": "Email",
+    "phone": "Teléfono (opcional)",
+    "service": "¿Sobre qué?",
+    "services": ["Pádel", "Escuela", "The Padel Performance Method®", "Eventos", "Fútbol 7", "Otro"],
+    "message": "Mensaje",
+    "submit": "Enviar mensaje",
+    "note": "Al enviar aceptas que tratemos tus datos para responderte.",
+    "success": "¡Gracias! Te responderemos lo antes posible."
+  },
+  "brands": {
+    "eyebrow": "Una familia de marcas",
+    "title": "Tres marcas, una misma experiencia",
+    "items": [
+      { "key": "club", "name": "Magaluf Sport Club", "role": "El club", "desc": "El lugar: instalaciones, comunidad y deporte en Magaluf." },
+      { "key": "method", "name": "The Padel Performance Method®", "role": "La metodología", "desc": "El sistema propio de entrenamiento y mejora." },
+      { "key": "experience", "name": "Mallorca Padel Experience", "role": "La experiencia internacional", "desc": "Pádel y vacaciones en Mallorca para jugadores de todo el mundo." }
+    ],
+    "visit": "Visitar"
+  },
   "testimonials": {
     "eyebrow": "Opiniones",
     "title": "Lo que dicen quienes ya entrenan aquí",
