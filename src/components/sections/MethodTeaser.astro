@@ -1,0 +1,44 @@
+---
+import Icon from '../ui/Icon.astro';
+import { useTranslations, getDict, localizePath, type Lang } from '../../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const pillars: { key: string; title: string }[] = getDict(lang).method.pillars;
+---
+
+<section class="relative overflow-hidden bg-navy py-20 text-white sm:py-24 grain">
+  <div class="relative mx-auto max-w-5xl px-5 text-center sm:px-8">
+    <span class="eyebrow-line mx-auto w-fit text-sm font-semibold uppercase tracking-[0.2em] text-gold" data-reveal>
+      {t('method.eyebrow')}
+    </span>
+    <h2 class="mx-auto mt-5 max-w-2xl text-3xl font-extrabold sm:text-4xl md:text-5xl" data-reveal>
+      {t('method.tagline')}
+    </h2>
+
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-x-3 gap-y-4" data-reveal>
+      {
+        pillars.map((p, i) => (
+          <>
+            <span class="rounded-full bg-white/10 px-5 py-2 font-display text-sm font-bold uppercase tracking-wide ring-1 ring-white/15">
+              {p.title}
+            </span>
+            {i < pillars.length - 1 && <span class="text-gold">→</span>}
+          </>
+        ))
+      }
+    </div>
+
+    <a
+      href={localizePath(lang, '/metodo')}
+      class="mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 font-display text-lg font-bold text-navy transition-all hover:-translate-y-0.5 hover:bg-accent-dark"
+      data-reveal
+    >
+      {t('hero.ctaSecondary')}
+      <Icon name="arrow" size={18} />
+    </a>
+  </div>
+</section>

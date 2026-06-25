@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/sections/Hero.astro';
+import WhyTrain from '../../components/sections/WhyTrain.astro';
+import MethodTeaser from '../../components/sections/MethodTeaser.astro';
 import ServicesGrid from '../../components/sections/ServicesGrid.astro';
 import VideoSection from '../../components/sections/VideoSection.astro';
 import FeatureSplit from '../../components/sections/FeatureSplit.astro';
@@ -24,6 +26,8 @@ const dict = getDict(lang);
 
 <BaseLayout lang={lang} title={dict.seo.home.title} description={dict.seo.home.description}>
   <Hero lang={lang} />
+  <WhyTrain lang={lang} />
+  <MethodTeaser lang={lang} />
   <ServicesGrid lang={lang} />
 
   <FeatureSplit
@@ -48,7 +52,7 @@ const dict = getDict(lang);
     reverse
     bg="surface"
     ctaLabel={t('classesSection.cta')}
-    ctaHref={localizePath(lang, '/contacto')}
+    ctaHref={localizePath(lang, '/escuela')}
   />
 
   <VideoSection lang={lang} />

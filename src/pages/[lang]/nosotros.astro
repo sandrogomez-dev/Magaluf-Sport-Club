@@ -9,7 +9,7 @@ import StatsBar from '../../components/sections/StatsBar.astro';
 import Gallery from '../../components/sections/Gallery.astro';
 import LocationContact from '../../components/sections/LocationContact.astro';
 import { img } from '../../lib/images';
-import { languages, useTranslations, getDict, type Lang } from '../../i18n/ui';
+import { languages, useTranslations, getDict, localizePath, type Lang } from '../../i18n/ui';
 import { club } from '../../content/club';
 
 export function getStaticPaths() {
@@ -46,6 +46,17 @@ const amenities = [
     image="community-team.jpg"
     reverse
     bg="surface"
+  />
+
+  <!-- Fútbol 7 (vive dentro de El Club) -->
+  <FeatureSplit
+    eyebrow={t('footballSection.eyebrow')}
+    title={t('footballSection.title')}
+    desc={t('footballSection.desc')}
+    features={dict.footballSection.features}
+    image="football-aerial.jpg"
+    ctaLabel={t('common.viewMore')}
+    ctaHref={localizePath(lang, '/futbol-7')}
   />
 
   <!-- Servicios del club, sobre plano aéreo -->

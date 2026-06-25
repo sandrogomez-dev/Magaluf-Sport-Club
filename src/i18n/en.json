@@ -2,6 +2,10 @@
   "meta": { "locale": "en-GB", "dir": "ltr" },
   "nav": {
     "home": "Home",
+    "club": "The Club",
+    "school": "School",
+    "method": "The Method",
+    "booking": "Booking",
     "padel": "Padel",
     "football": "7-a-side",
     "events": "Events",
@@ -24,10 +28,11 @@
   },
   "hero": {
     "eyebrow": "Magaluf · Mallorca",
-    "title": "Your padel & sports club in Mallorca",
-    "subtitle": "7 padel courts, a 7-a-side football pitch, café bar and events. Play, train and enjoy just steps from Magaluf, all year round.",
+    "title": "Train. Improve. Compete.",
+    "brandline": "The home of The Padel Performance Method®",
+    "subtitle": "Much more than a padel club: our own system to improve your game, with certified coaches, technology and measurable progress.",
     "ctaPrimary": "Book a court",
-    "ctaSecondary": "Discover the club"
+    "ctaSecondary": "Discover the method"
   },
   "stats": {
     "title": "The club at a glance",
@@ -219,10 +224,85 @@
       "reachUs": "How to reach us"
     }
   },
+  "why": {
+    "eyebrow": "Why us",
+    "title": "Why train with us?",
+    "intro": "What no other club can easily copy.",
+    "items": [
+      { "title": "Certified coaches", "desc": "A qualified team behind every session." },
+      { "title": "PUSUN® technology", "desc": "Quality repetitions to automate your technique." },
+      { "title": "AIBALL® artificial intelligence", "desc": "Game analysis with data and video." },
+      { "title": "Maximum 4 players", "desc": "Small groups, organised by level." },
+      { "title": "Our own methodology", "desc": "The Padel Performance Method®, only here." },
+      { "title": "Measurable improvement", "desc": "Personalised tracking and real results." }
+    ]
+  },
+  "method": {
+    "eyebrow": "The Padel Performance Method®",
+    "title": "The Padel Performance Method®",
+    "tagline": "Train. Repeat. Play. Analyse. Improve.",
+    "intro": "Improving as a player isn't only about time on court. Real progress comes when methodology, coaches, technology and real play work together. That's why we developed our own method, designed to speed up learning, improve performance and deliver measurable results.",
+    "pillarsTitle": "The 5 pillars of the method",
+    "pillars": [
+      { "key": "COACH", "title": "Coach", "desc": "Learn with qualified coaches and a structured methodology." },
+      { "key": "REPEAT", "title": "Repeat", "desc": "Automate movements with quality repetitions and specific technology." },
+      { "key": "PLAY", "title": "Play", "desc": "Apply what you learn in real game situations." },
+      { "key": "ANALYSE", "title": "Analyse", "desc": "Measure and analyse your performance with video, data and technology." },
+      { "key": "IMPROVE", "title": "Improve", "desc": "Turn learning into real, measurable improvement." }
+    ],
+    "techTitle": "Integrated technology",
+    "tech": [
+      { "name": "PUSUN®", "desc": "Training technology for quality repetitions and technical refinement." },
+      { "name": "AIBALL®", "desc": "Artificial intelligence that analyses your game and measures your progress." }
+    ],
+    "standardsTitle": "Our quality standards",
+    "standards": [
+      "Maximum 4 players per court",
+      "Groups organised by level",
+      "Certified coaches",
+      "Integrated technology",
+      "Supervised matches",
+      "Personalised tracking",
+      "Measurable improvement"
+    ],
+    "campsTitle": "Training programmes",
+    "campsIntro": "A journey through levels, from fundamentals to high performance.",
+    "camps": [
+      { "name": "Performance Camp 3", "label": "Essentials", "goal": "Building solid fundamentals." },
+      { "name": "Performance Camp 4", "label": "Development", "goal": "Technical and tactical development." },
+      { "name": "Performance Camp 5", "label": "Competition", "goal": "Competitive preparation." },
+      { "name": "Performance Camp 6", "label": "Elite Experience", "goal": "Full high-performance experience." }
+    ],
+    "campsNote": "Levels, benefits and prices — coming soon.",
+    "cta": "Request information"
+  },
+  "school": {
+    "eyebrow": "School",
+    "title": "School",
+    "tagline": "The Official School of The Padel Performance Method®",
+    "intro": "All our training is born from the method: certified coaches, small groups and measurable improvement, for all ages and levels.",
+    "programsTitle": "Programmes",
+    "programs": [
+      { "title": "Kids' school", "desc": "Kids learn by playing, with The Padel Performance Method®." },
+      { "title": "Adults' school", "desc": "From beginner to advanced, with our own methodology." },
+      { "title": "Private lessons", "desc": "Fully personalised, based on the method." },
+      { "title": "Competition training", "desc": "Get ready to compete, with tracking and data." },
+      { "title": "Camps", "desc": "Intensive padel on holidays, within the method." }
+    ],
+    "cta": "Request information"
+  },
   "seo": {
     "home": {
       "title": "Magaluf Sport Club | Padel, 7-a-side & Events in Mallorca",
       "description": "Sports club in Magaluf, Mallorca: 7 padel courts, a 7-a-side football pitch, school, café bar and events. Book your court online."
+    },
+    "method": {
+      "title": "The Padel Performance Method® | Magaluf Sport Club",
+      "description": "Our own padel training methodology in Magaluf: 5 pillars, PUSUN® and AIBALL® technology, groups of max 4 and measurable improvement."
+    },
+    "school": {
+      "title": "Padel school in Magaluf | Magaluf Sport Club",
+      "description": "Official school of The Padel Performance Method®: kids, adults, private lessons, competition and camps in Magaluf, Mallorca."
     },
     "padel": {
       "title": "Padel in Magaluf | 7 courts, school & classes — Magaluf Sport Club",

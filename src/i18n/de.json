@@ -2,6 +2,10 @@
   "meta": { "locale": "de-DE", "dir": "ltr" },
   "nav": {
     "home": "Start",
+    "club": "Der Club",
+    "school": "Schule",
+    "method": "The Method",
+    "booking": "Buchen",
     "padel": "Padel",
     "football": "Fußball 7",
     "events": "Events",
@@ -24,10 +28,11 @@
   },
   "hero": {
     "eyebrow": "Magaluf · Mallorca",
-    "title": "Dein Padel- und Sportclub auf Mallorca",
-    "subtitle": "7 Padelplätze, ein Fußball-7-Platz, Café-Bar und Events. Spiele, trainiere und genieße – nur wenige Schritte von Magaluf, das ganze Jahr über.",
+    "title": "Train. Improve. Compete.",
+    "brandline": "The home of The Padel Performance Method®",
+    "subtitle": "Viel mehr als ein Padelclub: ein eigenes System, um dein Spiel zu verbessern – mit zertifizierten Trainern, Technologie und messbarem Fortschritt.",
     "ctaPrimary": "Platz buchen",
-    "ctaSecondary": "Club entdecken"
+    "ctaSecondary": "Methode entdecken"
   },
   "stats": {
     "title": "Der Club auf einen Blick",
@@ -219,10 +224,85 @@
       "reachUs": "So erreichst du uns"
     }
   },
+  "why": {
+    "eyebrow": "Warum wir",
+    "title": "Warum bei uns trainieren?",
+    "intro": "Was kein anderer Club so leicht kopieren kann.",
+    "items": [
+      { "title": "Zertifizierte Trainer", "desc": "Ein qualifiziertes Team hinter jeder Einheit." },
+      { "title": "PUSUN®-Technologie", "desc": "Qualitätswiederholungen, um deine Technik zu automatisieren." },
+      { "title": "Künstliche Intelligenz AIBALL®", "desc": "Spielanalyse mit Daten und Video." },
+      { "title": "Maximal 4 Spieler", "desc": "Kleine Gruppen, nach Niveau organisiert." },
+      { "title": "Eigene Methodik", "desc": "The Padel Performance Method®, nur hier." },
+      { "title": "Messbarer Fortschritt", "desc": "Persönliche Betreuung und echte Ergebnisse." }
+    ]
+  },
+  "method": {
+    "eyebrow": "The Padel Performance Method®",
+    "title": "The Padel Performance Method®",
+    "tagline": "Trainiere. Wiederhole. Spiele. Analysiere. Verbessere.",
+    "intro": "Besser zu werden hängt nicht nur von der Zeit auf dem Platz ab. Echter Fortschritt entsteht, wenn Methodik, Trainer, Technologie und echtes Spiel zusammenwirken. Deshalb haben wir eine eigene Methodik entwickelt, die das Lernen beschleunigt, die Leistung verbessert und messbare Ergebnisse liefert.",
+    "pillarsTitle": "Die 5 Säulen der Methode",
+    "pillars": [
+      { "key": "COACH", "title": "Coach", "desc": "Lerne mit qualifizierten Trainern und einer strukturierten Methodik." },
+      { "key": "REPEAT", "title": "Repeat", "desc": "Automatisiere Bewegungen mit Qualitätswiederholungen und spezieller Technologie." },
+      { "key": "PLAY", "title": "Play", "desc": "Wende das Gelernte in echten Spielsituationen an." },
+      { "key": "ANALYSE", "title": "Analyse", "desc": "Miss und analysiere deine Leistung mit Video, Daten und Technologie." },
+      { "key": "IMPROVE", "title": "Improve", "desc": "Verwandle Lernen in echte, messbare Verbesserung." }
+    ],
+    "techTitle": "Integrierte Technologie",
+    "tech": [
+      { "name": "PUSUN®", "desc": "Trainingstechnologie für Qualitätswiederholungen und technische Verfeinerung." },
+      { "name": "AIBALL®", "desc": "Künstliche Intelligenz, die dein Spiel analysiert und deinen Fortschritt misst." }
+    ],
+    "standardsTitle": "Unsere Qualitätsstandards",
+    "standards": [
+      "Maximal 4 Spieler pro Platz",
+      "Nach Niveau organisierte Gruppen",
+      "Zertifizierte Trainer",
+      "Integrierte Technologie",
+      "Betreute Spiele",
+      "Persönliche Betreuung",
+      "Messbarer Fortschritt"
+    ],
+    "campsTitle": "Trainingsprogramme",
+    "campsIntro": "Ein Weg über die Niveaus, von den Grundlagen bis zur Spitzenleistung.",
+    "camps": [
+      { "name": "Performance Camp 3", "label": "Essentials", "goal": "Aufbau solider Grundlagen." },
+      { "name": "Performance Camp 4", "label": "Development", "goal": "Technische und taktische Entwicklung." },
+      { "name": "Performance Camp 5", "label": "Competition", "goal": "Wettkampfvorbereitung." },
+      { "name": "Performance Camp 6", "label": "Elite Experience", "goal": "Ganzheitliche Hochleistungserfahrung." }
+    ],
+    "campsNote": "Niveaus, Vorteile und Preise — in Kürze.",
+    "cta": "Informationen anfragen"
+  },
+  "school": {
+    "eyebrow": "Schule",
+    "title": "Schule",
+    "tagline": "Die offizielle Schule von The Padel Performance Method®",
+    "intro": "Unsere gesamte Ausbildung entspringt der Methode: zertifizierte Trainer, kleine Gruppen und messbarer Fortschritt – für alle Altersgruppen und Niveaus.",
+    "programsTitle": "Programme",
+    "programs": [
+      { "title": "Kinderschule", "desc": "Kinder lernen spielerisch, mit The Padel Performance Method®." },
+      { "title": "Erwachsenenschule", "desc": "Vom Anfänger bis zum Fortgeschrittenen, mit eigener Methodik." },
+      { "title": "Privatstunden", "desc": "Vollständig personalisiert, basierend auf der Methode." },
+      { "title": "Wettkampftraining", "desc": "Bereit für den Wettkampf, mit Betreuung und Daten." },
+      { "title": "Camps", "desc": "Intensives Padel in den Ferien, innerhalb der Methode." }
+    ],
+    "cta": "Informationen anfragen"
+  },
   "seo": {
     "home": {
       "title": "Magaluf Sport Club | Padel, Fußball 7 & Events auf Mallorca",
       "description": "Sportclub in Magaluf, Mallorca: 7 Padelplätze, Fußball-7-Platz, Schule, Café-Bar und Events. Buche deinen Platz online."
+    },
+    "method": {
+      "title": "The Padel Performance Method® | Magaluf Sport Club",
+      "description": "Eigene Padel-Trainingsmethodik in Magaluf: 5 Säulen, PUSUN®- und AIBALL®-Technologie, Gruppen von max. 4 und messbarer Fortschritt."
+    },
+    "school": {
+      "title": "Padelschule in Magaluf | Magaluf Sport Club",
+      "description": "Offizielle Schule von The Padel Performance Method®: Kinder, Erwachsene, Privatstunden, Wettkampf und Camps in Magaluf, Mallorca."
     },
     "padel": {
       "title": "Padel in Magaluf | 7 Plätze, Schule & Kurse — Magaluf Sport Club",

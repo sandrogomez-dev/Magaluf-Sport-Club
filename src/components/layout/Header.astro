@@ -16,10 +16,10 @@ const current = getPathWithoutLang(url);
 
 const nav = [
   { href: '/', label: t('nav.home') },
-  { href: '/padel', label: t('nav.padel') },
-  { href: '/futbol-7', label: t('nav.football') },
+  { href: '/nosotros', label: t('nav.club') },
+  { href: '/escuela', label: t('nav.school') },
+  { href: '/metodo', label: t('nav.method') },
   { href: '/eventos', label: t('nav.events') },
-  { href: '/nosotros', label: t('nav.about') },
   { href: '/contacto', label: t('nav.contact') },
 ];
 
@@ -62,7 +62,7 @@ const isActive = (href: string) =>
         rel="noopener noreferrer"
         class="hidden rounded-full bg-gold px-5 py-2.5 text-sm font-display font-bold text-navy shadow-lg shadow-gold/20 transition-all hover:-translate-y-0.5 hover:bg-accent-dark sm:inline-flex"
       >
-        {t('common.book')}
+        {t('nav.booking')}
       </a>
 
       <button
