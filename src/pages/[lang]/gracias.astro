@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/ui/Icon.astro';
+import { languages, useTranslations, getDict, localizePath, type Lang } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return (Object.keys(languages) as Lang[]).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params as { lang: Lang };
+const t = useTranslations(lang);
+const th = getDict(lang).pages.thanks;
+---
+
+<BaseLayout lang={lang} title={`${th.title} | Magaluf Sport Club`} description={th.text} noindex>
+  <section class="relative flex min-h-[82vh] items-center justify-center overflow-hidden bg-navy text-white grain">
+    <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-gold/20 blur-3xl"></div>
+    <div class="relative mx-auto max-w-xl px-5 pt-28 pb-20 text-center" data-reveal>
+      <span class="mx-auto grid h-20 w-20 place-items-center rounded-full bg-gold text-navy shadow-xl">
+        <Icon name="check" size={40} />
+      </span>
+      <h1 class="mt-8 text-4xl font-extrabold sm:text-5xl">{th.title}</h1>
+      <p class="mx-auto mt-5 max-w-md text-lg text-white/85">{th.text}</p>
+      <a
+        href={localizePath(lang, '/')}
+        class="mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 font-display text-lg font-bold text-navy transition-all hover:-translate-y-0.5 hover:bg-accent-dark"
+      >
+        {th.back}
+      </a>
+    </div>
+  </section>
+</BaseLayout>

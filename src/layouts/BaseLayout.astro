@@ -17,9 +17,10 @@ interface Props {
   lang: Lang;
   title: string;
   description: string;
+  noindex?: boolean;
 }
 
-const { lang, title, description } = Astro.props;
+const { lang, title, description, noindex = false } = Astro.props;
 const dict = getDict(lang);
 const locale = dict.meta?.locale ?? 'es-ES';
 
@@ -59,6 +60,7 @@ const jsonLd = {
 
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="canonical" href={canonical} />
 
     <!-- hreflang -->

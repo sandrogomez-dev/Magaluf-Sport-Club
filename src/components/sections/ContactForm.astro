@@ -1,7 +1,7 @@
 ---
 import Section from '../ui/Section.astro';
 import Icon from '../ui/Icon.astro';
-import { useTranslations, getDict, type Lang } from '../../i18n/ui';
+import { useTranslations, getDict, localizePath, type Lang } from '../../i18n/ui';
 import { club } from '../../content/club';
 
 interface Props {
@@ -33,6 +33,7 @@ const field =
       method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field"
+      action={localizePath(lang, '/gracias')}
       class="lg:col-span-3 rounded-[1.5rem] bg-surface p-6 ring-1 ring-line sm:p-8"
       data-reveal
     >

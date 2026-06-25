@@ -222,6 +222,11 @@
       "title": "Contacto",
       "intro": "¿Dudas, reservas o eventos? Hablamos.",
       "reachUs": "Cómo contactarnos"
+    },
+    "thanks": {
+      "title": "¡Gracias!",
+      "text": "Hemos recibido tu mensaje. Te responderemos lo antes posible.",
+      "back": "Volver al inicio"
     }
   },
   "form": {
