@@ -224,6 +224,13 @@
       "reachUs": "How to reach us"
     }
   },
+  "testimonials": {
+    "eyebrow": "Reviews",
+    "title": "What our players say",
+    "ratingLabel": "Average rating on Google",
+    "reviewsLabel": "reviews",
+    "cta": "See reviews on Google"
+  },
   "why": {
     "eyebrow": "Why us",
     "title": "Why train with us?",

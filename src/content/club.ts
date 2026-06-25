@@ -40,6 +40,21 @@ export const club = {
     { name: 'Ángel Bonilla', roleKey: 'fitness', photo: 'coach-angel.jpg', initials: 'AB' },
   ],
 
+  // Reseñas reales de Google (no traducir: se muestran en su idioma original).
+  google: {
+    score: 4.9,
+    count: 22,
+    url: 'https://www.google.com/maps/search/?api=1&query=Magaluf+Sport+Club,+Av.+Pere+Vaquer+47,+07181+Magaluf',
+  },
+  reviews: [
+    { name: 'Mattias Eriksson', lang: 'en', text: 'This club has fantastic padel facilities, and my daily games and coaching sessions here have been an absolute highlight!' },
+    { name: 'Christian Haupt', lang: 'en', text: 'Very nice atmosphere, great people, perfectly maintained courts — absolutely brilliant, we love it!!' },
+    { name: 'Sven Broger', lang: 'de', text: 'Schöne und gepflegte Anlage zum Padel und Fussball spielen inkl. Clubhaus und Umkleiden. Unser Padeltrainer Maxi ist wahnsinnig kompetent…' },
+    { name: 'José E. Marín', lang: 'es', text: 'Muy buenas instalaciones, trato con la gente y restaurante.' },
+    { name: 'Martina', lang: 'de', text: 'Die Anlage ist super, es hat einen Spielplatz für die Kleinen und ein Fussballfeld das man zu einem fairen Preis mieten kann. Die Eigentümer sind sehr freundlich und kompetent.' },
+    { name: 'hoWgan', lang: 'en', text: 'Nice padel spot with great and friendly owners!' },
+  ],
+
   // Paquete "Mallorca Padel Experience" (del flyer de Instagram) — PENDIENTE confirmar vigencia.
   holidays: {
     hotel: 'Hotel Flamboian Caribe & Spa',

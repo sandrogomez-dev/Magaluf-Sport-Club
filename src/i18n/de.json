@@ -224,6 +224,13 @@
       "reachUs": "So erreichst du uns"
     }
   },
+  "testimonials": {
+    "eyebrow": "Bewertungen",
+    "title": "Was unsere Spieler sagen",
+    "ratingLabel": "Durchschnittsbewertung bei Google",
+    "reviewsLabel": "Bewertungen",
+    "cta": "Bewertungen bei Google ansehen"
+  },
   "why": {
     "eyebrow": "Warum wir",
     "title": "Warum bei uns trainieren?",

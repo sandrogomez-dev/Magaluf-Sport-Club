@@ -224,6 +224,13 @@
       "reachUs": "Cómo contactarnos"
     }
   },
+  "testimonials": {
+    "eyebrow": "Opiniones",
+    "title": "Lo que dicen quienes ya entrenan aquí",
+    "ratingLabel": "Valoración media en Google",
+    "reviewsLabel": "opiniones",
+    "cta": "Ver opiniones en Google"
+  },
   "why": {
     "eyebrow": "Por qué nosotros",
     "title": "¿Por qué entrenar con nosotros?",
