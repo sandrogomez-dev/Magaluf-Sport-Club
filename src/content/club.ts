@@ -14,12 +14,17 @@ export const club = {
   instagram: 'https://www.instagram.com/magalufsportclub/',
   website: 'https://magalufsportclub.com',
   mpe: 'https://mallorcapadelexperience.com',
+  // Analítica: rellenar cuando el cliente pase los IDs. Vacío = no se carga nada.
+  analytics: {
+    ga4: '', // p. ej. 'G-XXXXXXXXXX'
+    metaPixel: '', // p. ej. '123456789012345'
+  },
 
-  address: 'Av. Pere Vaquer, 47, 07181 Magaluf, Illes Balears',
+  address: 'Av. Pere Vaquer Ramis, 47, 07181 Magaluf, Illes Balears',
   mapsEmbed:
-    'https://www.google.com/maps?q=Magaluf+Sport+Club,+Av.+Pere+Vaquer+47,+07181+Magaluf&output=embed',
+    'https://www.google.com/maps?q=Magaluf+Sport+Club,+Av.+Pere+Vaquer+Ramis+47,+07181+Magaluf&output=embed',
   mapsLink:
-    'https://www.google.com/maps/search/?api=1&query=Magaluf+Sport+Club,+Av.+Pere+Vaquer+47,+07181+Magaluf',
+    'https://www.google.com/maps/search/?api=1&query=Magaluf+Sport+Club,+Av.+Pere+Vaquer+Ramis+47,+07181+Magaluf',
   geo: { lat: 39.5101, lng: 2.5326 }, // aprox. — afinar si hace falta
 
   hours: {
@@ -37,8 +42,10 @@ export const club = {
 
   // Equipo de entrenadores. PENDIENTE: fotos individuales. Dany Ferrer dado de baja del equipo.
   team: [
-    { name: 'Maxi Zanazzi', roleKey: 'head', photo: 'coach-maxi.jpg', initials: 'MZ' },
-    { name: 'Ángel Bonilla', roleKey: 'fitness', photo: 'coach-angel.jpg', initials: 'AB' },
+    { key: 'maxi', name: 'Maxi Zanazzi', photo: 'coach-maxi.jpg', initials: 'MZ' },
+    { key: 'angel', name: 'Ángel Bonilla', photo: 'coach-angel.jpg', initials: 'AB' },
+    { key: 'miki', name: 'Miki', photo: null, initials: 'MK' },
+    { key: 'silvia', name: 'Silvia', photo: null, initials: 'SL' },
   ],
 
   // Reseñas reales de Google (no traducir: se muestran en su idioma original).

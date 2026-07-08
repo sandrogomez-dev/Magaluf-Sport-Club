@@ -123,17 +123,9 @@
   },
   "holidays": {
     "eyebrow": "Mallorca Padel Experience",
-    "title": "Padel-Urlaub auf Mallorca",
-    "desc": "7 Tage und 6 Nächte im Hotel mit Halbpension, täglichem Coaching und betreuten Spielen. Die perfekte Verbindung aus Padel und Urlaub in der Sonne.",
-    "includes": [
-      "7 Tage / 6 Nächte im 4★-Hotel mit Spa",
-      "Halbpension",
-      "1 Std. tägliches Coaching (max. 4 pro Platz)",
-      "1,5 Std. betreute Spiele"
-    ],
-    "priceFrom": "Ab",
-    "perPerson": "pro Person",
-    "priceNote": "600 € (Mär–Mai, Okt) · 750 € (Jun, Sep)",
+    "badge": "Demnächst",
+    "title": "Padel & Urlaub auf Mallorca",
+    "desc": "Wir gestalten unser Padel- und Urlaubserlebnis unter der Marke Mallorca Padel Experience neu – mit The Padel Performance Method® als Basis. Alle Details folgen in Kürze.",
     "cta": "Informationen anfragen"
   },
   "gallery": {
@@ -173,6 +165,18 @@
     "rights": "Alle Rechte vorbehalten.",
     "disclaimer": "Prototyp-Website. Bilder und Daten noch mit dem Kunden abzustimmen."
   },
+  "cookieConsent": {
+    "text": "Wir verwenden Cookies, um den Traffic zu analysieren und dein Erlebnis zu verbessern. Du kannst sie akzeptieren oder ablehnen.",
+    "accept": "Akzeptieren",
+    "reject": "Ablehnen",
+    "more": "Mehr erfahren"
+  },
+  "legal": {
+    "aviso": "Impressum",
+    "privacy": "Datenschutz",
+    "cookies": "Cookies",
+    "updated": "Zuletzt aktualisiert"
+  },
   "pages": {
     "padel": {
       "title": "Padel in Magaluf",
@@ -209,8 +213,13 @@
       "team": {
         "eyebrow": "Unser Team",
         "title": "Profis, die dich besser machen",
-        "intro": "Ein Team qualifizierter Trainer für alle Altersgruppen und Niveaus.",
-        "roles": { "head": "Cheftrainer", "fitness": "Fitnesstrainer" }
+        "intro": "Alle unsere Trainer sind von der Gustavo Pratto Academy akkreditiert – für eine einheitliche Methodik und strukturierten Unterricht.",
+        "members": {
+          "maxi": { "role": "Sportlicher Leiter", "bio": "Sportlicher Leiter und verantwortlich für die Entwicklung von The Padel Performance Method®. Leitet die sportliche Planung, die Trainerausbildung und die Programme des Clubs." },
+          "angel": { "role": "Wettkampftrainer", "bio": "Regelmäßiger Spieler der Segunda División und einer der stärksten Wettkampfspieler Mallorcas. Spezialist für Wettkampftraining und taktische Entwicklung." },
+          "miki": { "role": "Trainer", "bio": "Ehemaliger Leistungssportler mit umfangreicher Wettkampferfahrung. Spezialist für Techniktraining, Privatstunden und kleine Gruppen." },
+          "silvia": { "role": "Kundenbetreuung & Koordination", "bio": "Zuständig für Kundenbetreuung, Buchungskoordination und Betreuung der Schüler. Der erste Ansprechpartner des Clubs." }
+        }
       },
       "values": [
         { "title": "Gemeinschaft", "desc": "Ein Club, in dem man auf und neben dem Platz zum Team wird." },
@@ -287,9 +296,24 @@
     ],
     "techTitle": "Integrierte Technologie",
     "tech": [
-      { "name": "PUSUN®", "desc": "Trainingstechnologie für Qualitätswiederholungen und technische Verfeinerung." },
-      { "name": "AIBALL®", "desc": "Künstliche Intelligenz, die dein Spiel analysiert und deinen Fortschritt misst." }
+      {
+        "name": "PUSUN®",
+        "desc": "Unser Trainingssystem mit hochpräziser Ballmaschine. Fortlaufende Sequenzen von über 50 Bällen mit demselben Muster – vielfach mehr Qualitätswiederholungen pro Einheit.",
+        "points": ["Mehr Trainingsvolumen", "Technische Automatisierung", "Sofortige Korrekturen", "Mehr Selbstvertrauen", "Schnelleres Lernen"]
+      },
+      {
+        "name": "AIBALL®",
+        "desc": "Unser KI-gestütztes Aufnahme- und Analysesystem. Nimm Training und Spiele auf, um die Leistung mit objektiven Statistiken und taktischer Analyse auszuwerten.",
+        "points": ["Trainingsaufnahmen", "Spielaufnahmen", "Objektive Statistiken", "Taktische Analyse", "Fortschrittsverfolgung"]
+      }
     ],
+    "certification": {
+      "eyebrow": "Zertifizierte Methodik",
+      "title": "Akkreditiert von der Gustavo Pratto Academy",
+      "desc": "Alle unsere Trainer sind von der Gustavo Pratto Academy akkreditiert, einer der renommiertesten und international anerkanntesten Padel-Lehrmethodiken. Sie garantiert einen strukturierten, progressiven und auf die Verbesserung des Spielers ausgerichteten Unterricht."
+    },
+    "levelLabel": "Niveau",
+    "includesLabel": "Beinhaltet",
     "standardsTitle": "Unsere Qualitätsstandards",
     "standards": [
       "Maximal 4 Spieler pro Platz",
@@ -303,12 +327,12 @@
     "campsTitle": "Trainingsprogramme",
     "campsIntro": "Ein Weg über die Niveaus, von den Grundlagen bis zur Spitzenleistung.",
     "camps": [
-      { "name": "Performance Camp 3", "label": "Essentials", "goal": "Aufbau solider Grundlagen." },
-      { "name": "Performance Camp 4", "label": "Development", "goal": "Technische und taktische Entwicklung." },
-      { "name": "Performance Camp 5", "label": "Competition", "goal": "Wettkampfvorbereitung." },
-      { "name": "Performance Camp 6", "label": "Elite Experience", "goal": "Ganzheitliche Hochleistungserfahrung." }
+      { "name": "Performance Camp 3", "label": "Essentials", "level": "Anfänger & fortgeschrittene Anfänger", "goal": "Eine solide technische Basis aufbauen und die taktischen Grundlagen entwickeln.", "includes": ["Techniktraining", "Gezielte Wiederholungen", "Betreute Spiele", "Individuelles Feedback"] },
+      { "name": "Performance Camp 4", "label": "Development", "level": "Fortgeschritten", "goal": "Technik entwickeln, Taktik und Entscheidungsfindung verbessern.", "includes": ["Fortgeschrittene Technik", "Netzspiel", "Verteidigung", "Echte Spielsituationen", "Taktische Korrekturen"] },
+      { "name": "Performance Camp 5", "label": "Competition", "level": "Oberes Mittelfeld / Wettkampf", "goal": "Den Spieler auf den Wettkampf vorbereiten.", "includes": ["Strategie", "Offensivspiel", "Wettkampfvorbereitung", "Coaching während der Spiele"] },
+      { "name": "Performance Camp 6", "label": "Elite Experience", "level": "Fortgeschrittener Wettkampf", "goal": "Ein komplettes Hochleistungserlebnis.", "includes": ["Personalisiertes Training", "PUSUN®-Technologie", "AIBALL®-Analyse", "Individuelle Bewertung", "Individueller Verbesserungsplan"] }
     ],
-    "campsNote": "Niveaus, Vorteile und Preise — in Kürze.",
+    "campsNote": "Programme in Entwicklung. Fordere Informationen zu Niveaus und Verfügbarkeit an.",
     "cta": "Informationen anfragen"
   },
   "school": {

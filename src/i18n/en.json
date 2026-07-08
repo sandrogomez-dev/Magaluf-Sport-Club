@@ -123,17 +123,9 @@
   },
   "holidays": {
     "eyebrow": "Mallorca Padel Experience",
-    "title": "Padel Holidays in Mallorca",
-    "desc": "7 days and 6 nights at a hotel with half board, daily coaching and supervised matches. The perfect way to mix padel with a holiday in the sun.",
-    "includes": [
-      "7 days / 6 nights at a 4★ hotel with spa",
-      "Half board",
-      "1h daily coaching (max. 4 per court)",
-      "1.5h of supervised matches"
-    ],
-    "priceFrom": "From",
-    "perPerson": "per person",
-    "priceNote": "€600 (Mar–May, Oct) · €750 (Jun, Sep)",
+    "badge": "Coming soon",
+    "title": "Padel & holidays in Mallorca",
+    "desc": "We're redefining our padel & holiday experience under the Mallorca Padel Experience brand, powered by The Padel Performance Method®. Full details coming very soon.",
     "cta": "Request information"
   },
   "gallery": {
@@ -173,6 +165,18 @@
     "rights": "All rights reserved.",
     "disclaimer": "Prototype website. Images and details pending client validation."
   },
+  "cookieConsent": {
+    "text": "We use cookies to analyse traffic and improve your experience. You can accept or reject them.",
+    "accept": "Accept",
+    "reject": "Reject",
+    "more": "Learn more"
+  },
+  "legal": {
+    "aviso": "Legal notice",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "updated": "Last updated"
+  },
   "pages": {
     "padel": {
       "title": "Padel in Magaluf",
@@ -209,8 +213,13 @@
       "team": {
         "eyebrow": "Our team",
         "title": "Pros who help you improve",
-        "intro": "A team of qualified coaches for all ages and levels.",
-        "roles": { "head": "Head coach", "fitness": "Fitness coach" }
+        "intro": "All our coaches are accredited by the Gustavo Pratto Academy, ensuring a common methodology and structured teaching.",
+        "members": {
+          "maxi": { "role": "Sporting Director", "bio": "Sporting Director and head of the development of The Padel Performance Method®. Leads sporting planning, coach training and the club's programmes." },
+          "angel": { "role": "Competition Coach", "bio": "Regular Second Division player and one of the top competitive players in Mallorca. Specialist in competition training and tactical development." },
+          "miki": { "role": "Coach", "bio": "Former high-performance athlete with wide competition experience. Specialist in technique work, private lessons and small groups." },
+          "silvia": { "role": "Customer Care & Coordination", "bio": "In charge of customer care, booking coordination and student follow-up. The club's first point of contact." }
+        }
       },
       "values": [
         { "title": "Community", "desc": "A club where you build a team on and off the court." },
@@ -287,9 +296,24 @@
     ],
     "techTitle": "Integrated technology",
     "tech": [
-      { "name": "PUSUN®", "desc": "Training technology for quality repetitions and technical refinement." },
-      { "name": "AIBALL®", "desc": "Artificial intelligence that analyses your game and measures your progress." }
+      {
+        "name": "PUSUN®",
+        "desc": "Our high-precision ball-machine training system. Continuous sequences of 50+ balls with the same pattern, multiplying quality repetitions per session.",
+        "points": ["More training volume", "Technical automation", "Immediate corrections", "Greater player confidence", "Faster learning"]
+      },
+      {
+        "name": "AIBALL®",
+        "desc": "Our AI-powered recording and analysis system. Record training and matches to analyse performance with objective statistics and tactical analysis.",
+        "points": ["Training recordings", "Match recordings", "Objective statistics", "Tactical analysis", "Progress tracking"]
+      }
     ],
+    "certification": {
+      "eyebrow": "Certified methodology",
+      "title": "Accredited by the Gustavo Pratto Academy",
+      "desc": "All our coaches are accredited by the Gustavo Pratto Academy, one of the most prestigious and internationally recognised padel teaching methodologies. It guarantees structured, progressive teaching focused on player improvement."
+    },
+    "levelLabel": "Level",
+    "includesLabel": "Includes",
     "standardsTitle": "Our quality standards",
     "standards": [
       "Maximum 4 players per court",
@@ -303,12 +327,12 @@
     "campsTitle": "Training programmes",
     "campsIntro": "A journey through levels, from fundamentals to high performance.",
     "camps": [
-      { "name": "Performance Camp 3", "label": "Essentials", "goal": "Building solid fundamentals." },
-      { "name": "Performance Camp 4", "label": "Development", "goal": "Technical and tactical development." },
-      { "name": "Performance Camp 5", "label": "Competition", "goal": "Competitive preparation." },
-      { "name": "Performance Camp 6", "label": "Elite Experience", "goal": "Full high-performance experience." }
+      { "name": "Performance Camp 3", "label": "Essentials", "level": "Beginner & advanced beginner", "goal": "Build a solid technical base and develop the tactical fundamentals of the game.", "includes": ["Technical training", "Specific repetitions", "Supervised matches", "Individual feedback"] },
+      { "name": "Performance Camp 4", "label": "Development", "level": "Intermediate", "goal": "Develop technique, improve tactics and decision-making.", "includes": ["Advanced technique", "Net play", "Defence", "Real match situations", "Tactical corrections"] },
+      { "name": "Performance Camp 5", "label": "Competition", "level": "Upper intermediate / Competition", "goal": "Prepare the player to compete with greater guarantees.", "includes": ["Strategy", "Offensive play", "Competitive preparation", "In-match coaching"] },
+      { "name": "Performance Camp 6", "label": "Elite Experience", "level": "Advanced competition", "goal": "A complete high-performance experience.", "includes": ["Personalised training", "PUSUN® technology", "AIBALL® analysis", "Personalised assessment", "Individual improvement plan"] }
     ],
-    "campsNote": "Levels, benefits and prices — coming soon.",
+    "campsNote": "Programmes in development. Request information about levels and availability.",
     "cta": "Request information"
   },
   "school": {

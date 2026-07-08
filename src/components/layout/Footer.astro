@@ -87,9 +87,13 @@ const nav = [
   </div>
 
   <div class="border-t border-white/10">
-    <div class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-6 text-sm text-white/50 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+    <div class="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-6 text-sm text-white/50 sm:flex-row sm:items-center sm:justify-between sm:px-8">
       <p>© {year} Magaluf Sport Club. {t('footer.rights')}</p>
-      <p class="text-white/30">{t('footer.disclaimer')}</p>
+      <nav class="flex flex-wrap gap-x-5 gap-y-2">
+        <a href={localizePath(lang, '/aviso-legal')} class="hover:text-white">{t('legal.aviso')}</a>
+        <a href={localizePath(lang, '/privacidad')} class="hover:text-white">{t('legal.privacy')}</a>
+        <a href={localizePath(lang, '/cookies')} class="hover:text-white">{t('legal.cookies')}</a>
+      </nav>
     </div>
   </div>
 </footer>

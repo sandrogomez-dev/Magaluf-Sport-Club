@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LegalDoc from '../../components/sections/LegalDoc.astro';
+import { avisoLegal } from '../../content/legal';
+import { languages, useTranslations, type Lang } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return (Object.keys(languages) as Lang[]).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params as { lang: Lang };
+const t = useTranslations(lang);
+const doc = avisoLegal;
+---
+
+<BaseLayout lang={lang} title={`${doc.title} | Magaluf Sport Club`} description={doc.title}>
+  <section class="relative overflow-hidden bg-navy pt-32 pb-12 text-white sm:pt-36 grain">
+    <div class="relative mx-auto max-w-3xl px-5 sm:px-8">
+      <h1 class="text-3xl font-extrabold sm:text-4xl">{doc.title}</h1>
+    </div>
+  </section>
+  <LegalDoc doc={doc} updatedLabel={t('legal.updated')} />
+</BaseLayout>
