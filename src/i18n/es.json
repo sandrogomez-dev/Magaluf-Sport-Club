@@ -77,12 +77,12 @@
   "classesSection": {
     "eyebrow": "Escuela & Clases",
     "title": "Aprende y mejora con nuestros profesores",
-    "desc": "Escuela de pádel para niños y adultos, con un equipo de profesores titulados. Clases individuales y en grupo, de la iniciación al perfeccionamiento.",
+    "desc": "Clases individuales y en grupo para niños y adultos, de la iniciación al perfeccionamiento. No son clases sueltas: son entrenamientos basados en The Padel Performance Method®.",
     "features": [
-      "Profesores titulados",
-      "Para niños y adultos",
-      "Grupos reducidos",
-      "De iniciación a competición"
+      "Entrenadores certificados (Academia Gustavo Pratto)",
+      "Basadas en The Padel Performance Method®",
+      "Grupos reducidos (máx. 4 por pista)",
+      "Para niños, adultos y competición"
     ],
     "cta": "Reserva tu clase"
   },
