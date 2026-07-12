@@ -43,6 +43,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Evita cualquier desbordamiento horizontal en móvil */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 700;
