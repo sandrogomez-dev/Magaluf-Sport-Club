@@ -30,15 +30,11 @@ const t = useTranslations(lang);
 
   <div class="relative mx-auto w-full max-w-6xl px-5 pt-28 pb-16 sm:px-8">
     <div class="max-w-2xl text-white" data-reveal>
-      <!-- Logo + nombre del club -->
-      <div class="flex items-center gap-3">
-        <Image src={img('logo.png')} alt="Magaluf Sport Club" width={96} height={84} class="h-14 w-auto" loading="eager" />
-        <span class="font-display text-lg font-extrabold leading-tight">Magaluf<br />Sport Club</span>
-      </div>
-
-      <h1 class="mt-7 text-4xl font-extrabold leading-[1.02] sm:text-5xl md:text-6xl">{t('hero.title')}</h1>
-      <p class="mt-3 font-display text-base font-semibold text-gold sm:text-lg">{t('hero.brandline')}</p>
-      <p class="mt-5 max-w-xl text-lg leading-relaxed text-white/85">{t('hero.subtitle')}</p>
+      <!-- Logo grande + nombre del club como protagonista -->
+      <Image src={img('logo.png')} alt="Magaluf Sport Club" width={160} height={140} class="h-20 w-auto sm:h-24" loading="eager" />
+      <h1 class="mt-5 text-5xl font-extrabold leading-[1.0] sm:text-6xl md:text-7xl">Magaluf Sport Club</h1>
+      <p class="mt-4 font-display text-xl font-semibold text-white/90 sm:text-2xl">{t('hero.title')}</p>
+      <p class="mt-2 font-display text-sm font-semibold uppercase tracking-wide text-gold sm:text-base">{t('hero.brandline')}</p>
 
       <!-- Accesos rápidos: Pádel · Fútbol 7 · Reservar · WhatsApp -->
       <div class="mt-8 flex flex-wrap gap-3">
