@@ -28,7 +28,7 @@
   },
   "hero": {
     "eyebrow": "Magaluf · Mallorca",
-    "title": "Padel & Fußball 7 in Magaluf",
+    "title": "Mehr als ein Sportclub: ein Ort, an dem Sport, Ausbildung und Erlebnis zusammenkommen, um zu genießen, zu lernen und besser zu werden.",
     "brandline": "Zuhause von The Padel Performance Method®",
     "subtitle": "7 Padelplätze, ein Fußball-7-Platz, Schule und Café-Bar. Im Herzen von Magaluf, Mallorca.",
     "ctaPrimary": "Platz buchen",
@@ -224,6 +224,28 @@
         "title": "Unsere Anlage",
         "items": ["7 Padelplätze", "Fußball-7-Platz", "Café", "Restaurant", "Shop", "Kostenlose Parkplätze", "Umkleidekabinen", "Kinderbereich", "Terrasse", "Rezeption"]
       },
+      "filosofiaTitle": "Unsere Philosophie",
+      "filosofia": "Ein Sportclub sollte viel mehr sein als ein Ort zum Sporttreiben: ein Raum zum Genießen, Lernen, Verbessern und Teilen – ganz gleich, welches Alter oder Niveau. Wir verstehen Sport als Mittel, um Einsatz, Engagement, Respekt und Teamgeist zu entwickeln, in einem professionellen, nahbaren und einladenden Umfeld – mit hervorragender Anlage, engagiertem Team, eigener Methodik und persönlicher Betreuung.",
+      "visionTitle": "Unsere Vision",
+      "vision": "Der führende Sportclub auf Mallorca zu werden, offen für Einheimische und Besucher aus aller Welt, der Ausbildung, Wettkampf, Technologie und Freizeit an einem Ort vereint. Ein moderner, innovativer Club, in dem jeder genießt, lernt, sich verbessert und unvergessliche Erlebnisse hat.",
+      "valoresTitle": "Unsere Werte",
+      "valores": [
+        { "title": "Leidenschaft", "desc": "Wir leben Sport mit Begeisterung und geben sie in allem weiter." },
+        { "title": "Engagement", "desc": "Wir geben alles – mit nahbarem Umgang und Qualität." },
+        { "title": "Exzellenz", "desc": "Ständige Verbesserung bei Anlage, Ausbildung und Betreuung." },
+        { "title": "Innovation", "desc": "Neue Methoden und Technologie im Training." },
+        { "title": "Teamgeist", "desc": "Individuelles Wachstum ist im Team größer." },
+        { "title": "Respekt", "desc": "Gegenüber Mitspielern, Trainern, Gegnern und der Anlage." },
+        { "title": "Gemeinschaft", "desc": "Ein Club, in dem du Teil einer großen Sportfamilie bist." },
+        { "title": "Stetige Verbesserung", "desc": "Es gibt immer eine Chance zu lernen und über sich hinauszuwachsen." }
+      ],
+      "diferenciadoresTitle": "Was macht uns anders?",
+      "diferenciadores": [
+        { "title": "Ein Club für Menschen", "desc": "Moderne Anlage, einladende Atmosphäre und breites Sportangebot." },
+        { "title": "Eigene Methodik", "desc": "The Padel Performance Method®: Methodik, Trainer, Technologie und Betreuung für messbare Verbesserung." },
+        { "title": "Aktive Sportgemeinschaft", "desc": "Ligen, Turniere, Events und soziale Aktivitäten für alle Altersgruppen." },
+        { "title": "Ein Fenster zum internationalen Sport", "desc": "Mit Mallorca Padel Experience Sport auf Mallorca von überall auf der Welt erleben." }
+      ],
       "team": {
         "eyebrow": "Unser Team",
         "title": "Profis, die dich besser machen",
