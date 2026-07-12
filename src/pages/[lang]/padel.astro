@@ -6,6 +6,7 @@ import Section from '../../components/ui/Section.astro';
 import Heading from '../../components/ui/Heading.astro';
 import Icon from '../../components/ui/Icon.astro';
 import MethodSections from '../../components/sections/MethodSections.astro';
+import VideoSection from '../../components/sections/VideoSection.astro';
 import CtaBanner from '../../components/sections/CtaBanner.astro';
 import { languages, useTranslations, getDict, localizePath, type Lang } from '../../i18n/ui';
 import { club } from '../../content/club';
@@ -79,6 +80,9 @@ const ph = dict.padelHub;
       <p class="mt-4 text-lg leading-relaxed text-muted">{ph.competicionDesc}</p>
     </div>
   </Section>
+
+  <!-- Vídeo: "No solo alquilamos palas. Entrenamos." (lead-in al método) -->
+  <VideoSection lang={lang} />
 
   <!-- The Padel Performance Method® (completo) -->
   <MethodSections lang={lang} />
