@@ -22,3 +22,6 @@ npm-debug.log*
 # originales pesados (drones, vídeos sin comprimir, logo fuente…) — viven en Drive,
 # NO en el repo del sitio. El build solo usa src/assets/ y public/.
 /assets/
+
+# vídeos originales pesados (el comprimido va en public/video/)
+/src/assets/video/
