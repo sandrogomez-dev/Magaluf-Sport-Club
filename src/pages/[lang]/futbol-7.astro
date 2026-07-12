@@ -2,6 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageIntro from '../../components/sections/PageIntro.astro';
 import FeatureSplit from '../../components/sections/FeatureSplit.astro';
+import Section from '../../components/ui/Section.astro';
+import Heading from '../../components/ui/Heading.astro';
+import Icon from '../../components/ui/Icon.astro';
 import CtaBanner from '../../components/sections/CtaBanner.astro';
 import { languages, useTranslations, getDict, type Lang } from '../../i18n/ui';
 import { club } from '../../content/club';
@@ -27,6 +30,20 @@ const dict = getDict(lang);
     ctaHref={club.booking}
     ctaExternal
   />
+
+  <Section bg="surface">
+    <Heading title={t('footballHub.title')} intro={t('footballHub.intro')} align="center" />
+    <div class="mx-auto mt-12 grid max-w-3xl grid-cols-2 gap-4 sm:grid-cols-3">
+      {
+        dict.footballHub.items.map((item: string, i: number) => (
+          <div class="flex items-center gap-3 rounded-2xl bg-white p-5 ring-1 ring-line/60" data-reveal style={`transition-delay:${i * 50}ms`}>
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand/10 text-brand"><Icon name="football" size={20} /></span>
+            <span class="text-sm font-semibold text-ink">{item}</span>
+          </div>
+        ))
+      }
+    </div>
+  </Section>
 
   <CtaBanner lang={lang} />
 </BaseLayout>

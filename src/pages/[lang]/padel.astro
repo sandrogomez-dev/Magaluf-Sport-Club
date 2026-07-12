@@ -2,7 +2,10 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageIntro from '../../components/sections/PageIntro.astro';
 import FeatureSplit from '../../components/sections/FeatureSplit.astro';
-import Gallery from '../../components/sections/Gallery.astro';
+import Section from '../../components/ui/Section.astro';
+import Heading from '../../components/ui/Heading.astro';
+import Icon from '../../components/ui/Icon.astro';
+import MethodSections from '../../components/sections/MethodSections.astro';
 import CtaBanner from '../../components/sections/CtaBanner.astro';
 import { languages, useTranslations, getDict, localizePath, type Lang } from '../../i18n/ui';
 import { club } from '../../content/club';
@@ -13,11 +16,16 @@ export function getStaticPaths() {
 const { lang } = Astro.params as { lang: Lang };
 const t = useTranslations(lang);
 const dict = getDict(lang);
+const contact = localizePath(lang, '/contacto');
+const schoolPrograms: { title: string; desc: string }[] = dict.school.programs;
+const schoolIcons = ['kids', 'users', 'school', 'trophy', 'badge'];
+const ph = dict.padelHub;
 ---
 
 <BaseLayout lang={lang} title={dict.seo.padel.title} description={dict.seo.padel.description}>
   <PageIntro eyebrow={t('nav.padel')} title={dict.pages.padel.title} intro={dict.pages.padel.intro} image="padel-doubles.jpg" />
 
+  <!-- Reserva de pistas -->
   <FeatureSplit
     eyebrow={t('padelSection.eyebrow')}
     title={t('padelSection.title')}
@@ -31,6 +39,25 @@ const dict = getDict(lang);
     ctaExternal
   />
 
+  <!-- Escuela de pádel -->
+  <Section id="escuela" bg="surface">
+    <Heading eyebrow={t('school.eyebrow')} title={t('school.title')} intro={t('school.tagline')} align="center" />
+    <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        schoolPrograms.map((p, i) => (
+          <div class="flex flex-col rounded-[1.5rem] bg-white p-7 ring-1 ring-line/60 transition-all hover:-translate-y-1 hover:ring-gold" data-reveal style={`transition-delay:${i * 70}ms`}>
+            <span class="grid h-12 w-12 place-items-center rounded-full bg-navy text-gold">
+              <Icon name={schoolIcons[i] ?? 'school'} size={24} />
+            </span>
+            <h3 class="mt-4 font-display text-lg font-bold text-ink">{p.title}</h3>
+            <p class="mt-2 flex-1 text-sm leading-snug text-muted">{p.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+  </Section>
+
+  <!-- Clases particulares (basadas en el método) -->
   <FeatureSplit
     eyebrow={t('classesSection.eyebrow')}
     title={t('classesSection.title')}
@@ -38,11 +65,42 @@ const dict = getDict(lang);
     features={dict.classesSection.features}
     image="coaches.jpg"
     reverse
-    bg="surface"
     ctaLabel={t('classesSection.cta')}
-    ctaHref={localizePath(lang, '/contacto')}
+    ctaHref={contact}
   />
 
-  <Gallery lang={lang} />
+  <!-- Competición y torneos -->
+  <Section bg="surface">
+    <div class="mx-auto max-w-3xl text-center" data-reveal>
+      <span class="grid mx-auto h-14 w-14 place-items-center rounded-full bg-navy text-gold">
+        <Icon name="trophy" size={28} />
+      </span>
+      <h2 class="mt-5 text-3xl font-bold sm:text-4xl">{ph.competicionTitle}</h2>
+      <p class="mt-4 text-lg leading-relaxed text-muted">{ph.competicionDesc}</p>
+    </div>
+  </Section>
+
+  <!-- The Padel Performance Method® (completo) -->
+  <MethodSections lang={lang} />
+
+  <!-- Mallorca Padel Experience -->
+  <section id="mpe" class="relative overflow-hidden bg-navy py-20 text-white sm:py-28 grain">
+    <div class="relative mx-auto max-w-3xl px-5 text-center sm:px-8" data-reveal>
+      <span class="text-sm font-semibold uppercase tracking-[0.2em] text-gold">{ph.mpeEyebrow}</span>
+      <h2 class="mt-4 text-3xl font-extrabold sm:text-4xl md:text-5xl">{ph.mpeTitle}</h2>
+      <p class="mx-auto mt-6 max-w-xl font-display text-xl font-semibold italic text-white/90">“{ph.mpeConcept}”</p>
+      <p class="mx-auto mt-5 max-w-xl leading-relaxed text-white/75">{ph.mpeDesc}</p>
+      <a
+        href={club.mpe}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-9 inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 font-display text-lg font-bold text-navy transition-all hover:-translate-y-0.5 hover:bg-accent-dark"
+      >
+        {ph.mpeCta}
+        <Icon name="arrow" size={18} />
+      </a>
+    </div>
+  </section>
+
   <CtaBanner lang={lang} />
 </BaseLayout>

@@ -2,7 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageIntro from '../../components/sections/PageIntro.astro';
 import EventsTeaser from '../../components/sections/EventsTeaser.astro';
-import Holidays from '../../components/sections/Holidays.astro';
+import Section from '../../components/ui/Section.astro';
+import Heading from '../../components/ui/Heading.astro';
+import Icon from '../../components/ui/Icon.astro';
 import CtaBanner from '../../components/sections/CtaBanner.astro';
 import { languages, useTranslations, getDict, type Lang } from '../../i18n/ui';
 
@@ -12,11 +14,26 @@ export function getStaticPaths() {
 const { lang } = Astro.params as { lang: Lang };
 const t = useTranslations(lang);
 const dict = getDict(lang);
+const categories: string[] = dict.events.categories;
 ---
 
 <BaseLayout lang={lang} title={dict.seo.events.title} description={dict.seo.events.description}>
   <PageIntro eyebrow={t('nav.events')} title={dict.pages.events.title} intro={dict.pages.events.intro} image="events-group.jpg" />
   <EventsTeaser lang={lang} />
-  <Holidays lang={lang} />
+
+  <Section bg="surface">
+    <Heading title={t('events.categoriesTitle')} align="center" />
+    <div class="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-4">
+      {
+        categories.map((c, i) => (
+          <div class="flex flex-col items-center gap-3 rounded-2xl bg-white p-6 text-center ring-1 ring-line/60" data-reveal style={`transition-delay:${i * 50}ms`}>
+            <span class="grid h-11 w-11 place-items-center rounded-full bg-brand/10 text-brand"><Icon name="trophy" size={20} /></span>
+            <span class="text-sm font-semibold text-ink">{c}</span>
+          </div>
+        ))
+      }
+    </div>
+  </Section>
+
   <CtaBanner lang={lang} />
 </BaseLayout>

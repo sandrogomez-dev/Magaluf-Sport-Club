@@ -34,6 +34,14 @@
     "ctaPrimary": "Book a court",
     "ctaSecondary": "Discover the method"
   },
+  "home": {
+    "welcomeTitle": "Welcome to Magaluf Sport Club",
+    "welcomeIntro": "Your padel & 7-a-side club in Magaluf. Where would you like to start?",
+    "clubDesc": "Who we are, facilities and team.",
+    "padelDesc": "Bookings, school, classes and our method.",
+    "footballDesc": "Pitch rental, schools, camps and tournaments.",
+    "eventsDesc": "Tournaments, leagues and events all year round."
+  },
   "stats": {
     "title": "The club at a glance",
     "padel": "Padel courts",
@@ -121,6 +129,11 @@
     ],
     "cta": "Book the pitch"
   },
+  "footballHub": {
+    "title": "All 7-a-side football",
+    "intro": "Get your team together or host your event on our pitch.",
+    "items": ["Pitch rental", "Schools", "Camps", "Tournaments", "Events", "Companies"]
+  },
   "holidays": {
     "eyebrow": "Mallorca Padel Experience",
     "badge": "Coming soon",
@@ -140,7 +153,9 @@
     "kids": "Kids' events",
     "parties": "Birthdays & groups",
     "company": "Corporate events",
-    "cta": "Plan your event"
+    "cta": "Plan your event",
+    "categoriesTitle": "Everything that happens at the club",
+    "categories": ["Padel tournaments", "Americanas", "Leagues", "Social events", "Corporate events", "Presentations", "Clinics", "Camps"]
   },
   "location": {
     "title": "Where we are",
@@ -204,11 +219,8 @@
         "desc": "Tournaments, social meetups, a padel school with private and group classes, and a 7-a-side football pitch for all kinds of use. A club that's alive on and off the court."
       },
       "amenities": {
-        "title": "Everything you need, in one place",
-        "cafe": "Café",
-        "shop": "Shop",
-        "lockers": "Changing rooms",
-        "parking": "Free parking"
+        "title": "Our facilities",
+        "items": ["7 padel courts", "7-a-side football pitch", "Café", "Restaurant", "Shop", "Free parking", "Changing rooms", "Kids area", "Terrace", "Reception"]
       },
       "team": {
         "eyebrow": "Our team",
@@ -260,6 +272,15 @@
       { "key": "experience", "name": "Mallorca Padel Experience", "role": "The international experience", "desc": "Padel and holidays in Mallorca for players from all over the world." }
     ],
     "visit": "Visit"
+  },
+  "padelHub": {
+    "competicionTitle": "Competition & tournaments",
+    "competicionDesc": "Competition teams, tournaments, americanas and leagues all year round. Compete backed by our method.",
+    "mpeEyebrow": "Mallorca Padel Experience",
+    "mpeTitle": "Padel & holidays in Mallorca",
+    "mpeConcept": "You book the flight and we take care of everything else.",
+    "mpeDesc": "Our international project: complete padel experiences in Mallorca, powered by The Padel Performance Method®.",
+    "mpeCta": "Visit Mallorca Padel Experience"
   },
   "testimonials": {
     "eyebrow": "Reviews",

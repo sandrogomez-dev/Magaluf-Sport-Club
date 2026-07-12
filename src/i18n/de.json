@@ -34,6 +34,14 @@
     "ctaPrimary": "Platz buchen",
     "ctaSecondary": "Methode entdecken"
   },
+  "home": {
+    "welcomeTitle": "Willkommen im Magaluf Sport Club",
+    "welcomeIntro": "Dein Padel- und Fußball-7-Club in Magaluf. Wo möchtest du starten?",
+    "clubDesc": "Wer wir sind, Anlage und Team.",
+    "padelDesc": "Buchungen, Schule, Kurse und unsere Methode.",
+    "footballDesc": "Platzvermietung, Schulen, Camps und Turniere.",
+    "eventsDesc": "Turniere, Ligen und Events das ganze Jahr über."
+  },
   "stats": {
     "title": "Der Club auf einen Blick",
     "padel": "Padelplätze",
@@ -121,6 +129,11 @@
     ],
     "cta": "Platz buchen"
   },
+  "footballHub": {
+    "title": "Alles rund um Fußball 7",
+    "intro": "Trommle dein Team zusammen oder veranstalte dein Event auf unserem Platz.",
+    "items": ["Platzvermietung", "Schulen", "Camps", "Turniere", "Events", "Firmen"]
+  },
   "holidays": {
     "eyebrow": "Mallorca Padel Experience",
     "badge": "Demnächst",
@@ -140,7 +153,9 @@
     "kids": "Kinder-Events",
     "parties": "Geburtstage & Gruppen",
     "company": "Firmenevents",
-    "cta": "Event planen"
+    "cta": "Event planen",
+    "categoriesTitle": "Alles, was im Club passiert",
+    "categories": ["Padelturniere", "Americanas", "Ligen", "Social Events", "Firmenevents", "Präsentationen", "Clinics", "Camps"]
   },
   "location": {
     "title": "Wo wir sind",
@@ -204,11 +219,8 @@
         "desc": "Turniere, gesellige Treffen, eine Padelschule mit Einzel- und Gruppenkursen und ein Fußball-7-Platz für vielfältige Nutzung. Ein Club voller Leben – auf und neben dem Platz."
       },
       "amenities": {
-        "title": "Alles, was du brauchst, an einem Ort",
-        "cafe": "Café",
-        "shop": "Shop",
-        "lockers": "Umkleidekabinen",
-        "parking": "Kostenlose Parkplätze"
+        "title": "Unsere Anlage",
+        "items": ["7 Padelplätze", "Fußball-7-Platz", "Café", "Restaurant", "Shop", "Kostenlose Parkplätze", "Umkleidekabinen", "Kinderbereich", "Terrasse", "Rezeption"]
       },
       "team": {
         "eyebrow": "Unser Team",
@@ -260,6 +272,15 @@
       { "key": "experience", "name": "Mallorca Padel Experience", "role": "Das internationale Erlebnis", "desc": "Padel und Urlaub auf Mallorca für Spieler aus aller Welt." }
     ],
     "visit": "Besuchen"
+  },
+  "padelHub": {
+    "competicionTitle": "Wettkampf & Turniere",
+    "competicionDesc": "Wettkampfteams, Turniere, Americanas und Ligen das ganze Jahr über. Tritt an – mit der Unterstützung unserer Methode.",
+    "mpeEyebrow": "Mallorca Padel Experience",
+    "mpeTitle": "Padel & Urlaub auf Mallorca",
+    "mpeConcept": "Du buchst den Flug und wir kümmern uns um den Rest.",
+    "mpeDesc": "Unser internationales Projekt: komplette Padel-Erlebnisse auf Mallorca, mit The Padel Performance Method® als Basis.",
+    "mpeCta": "Mallorca Padel Experience besuchen"
   },
   "testimonials": {
     "eyebrow": "Bewertungen",
