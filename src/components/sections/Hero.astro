@@ -30,28 +30,25 @@ const t = useTranslations(lang);
 
   <div class="relative mx-auto w-full max-w-6xl px-5 pt-28 pb-16 sm:px-8">
     <div class="max-w-2xl text-white" data-reveal>
-      <!-- Logo grande + nombre del club como protagonista -->
-      <Image src={img('logo.png')} alt="Magaluf Sport Club" width={160} height={140} class="h-20 w-auto sm:h-24" loading="eager" />
-      <h1 class="mt-5 text-5xl font-extrabold leading-[1.0] sm:text-6xl md:text-7xl">Magaluf Sport Club</h1>
-      <p class="mt-4 font-display text-xl font-semibold text-white/90 sm:text-2xl">{t('hero.title')}</p>
-      <p class="mt-2 font-display text-sm font-semibold uppercase tracking-wide text-gold sm:text-base">{t('hero.brandline')}</p>
+      <!-- 1) Nombre del club -->
+      <h1 class="text-4xl font-extrabold leading-[1.02] sm:text-5xl md:text-6xl">Magaluf Sport Club</h1>
 
-      <!-- Accesos rápidos: Pádel · Fútbol 7 · Reservar · WhatsApp -->
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href={localizePath(lang, '/padel')} class="inline-flex items-center gap-2 rounded-full bg-white/10 px-6 py-3.5 font-display font-semibold text-white ring-1 ring-white/25 backdrop-blur transition-all hover:bg-white/20">
+      <!-- 2) Logo -->
+      <Image src={img('logo.png')} alt="Magaluf Sport Club" width={160} height={140} class="mt-5 h-20 w-auto sm:h-24" loading="eager" />
+
+      <!-- 3) Pádel y fútbol 7 -->
+      <p class="mt-5 font-display text-xl font-semibold text-white/90 sm:text-2xl">{t('hero.title')}</p>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <a href={localizePath(lang, '/padel')} class="inline-flex items-center gap-2 rounded-full bg-white/10 px-6 py-3 font-display font-semibold text-white ring-1 ring-white/25 backdrop-blur transition-all hover:bg-white/20">
           <Icon name="padel" size={20} />{t('nav.padel')}
         </a>
-        <a href={localizePath(lang, '/futbol-7')} class="inline-flex items-center gap-2 rounded-full bg-white/10 px-6 py-3.5 font-display font-semibold text-white ring-1 ring-white/25 backdrop-blur transition-all hover:bg-white/20">
+        <a href={localizePath(lang, '/futbol-7')} class="inline-flex items-center gap-2 rounded-full bg-white/10 px-6 py-3 font-display font-semibold text-white ring-1 ring-white/25 backdrop-blur transition-all hover:bg-white/20">
           <Icon name="football" size={20} />{t('nav.football')}
-        </a>
-        <a href={club.booking} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 font-display font-bold text-navy shadow-lg shadow-gold/25 transition-all hover:-translate-y-0.5 hover:bg-accent-dark">
-          {t('hero.ctaPrimary')}
-          <Icon name="arrow" size={18} />
         </a>
       </div>
 
-      <!-- Contacto directo: dirección · teléfono · WhatsApp -->
-      <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/85">
+      <!-- 4) Dirección y demás info -->
+      <div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/85">
         <a href={club.mapsLink} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-gold">
           <Icon name="pin" size={16} />{club.address}
         </a>
@@ -65,6 +62,17 @@ const t = useTranslations(lang);
           <Icon name="whatsapp" size={16} />WhatsApp
         </a>
       </div>
+
+      <!-- 5) Reservar pista -->
+      <div class="mt-7">
+        <a href={club.booking} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 font-display text-lg font-bold text-navy shadow-lg shadow-gold/25 transition-all hover:-translate-y-0.5 hover:bg-accent-dark">
+          {t('hero.ctaPrimary')}
+          <Icon name="arrow" size={18} />
+        </a>
+      </div>
+
+      <!-- 6) The home of The Padel Performance Method® -->
+      <p class="mt-6 font-display text-sm font-semibold uppercase tracking-wide text-gold sm:text-base">{t('hero.brandline')}</p>
     </div>
   </div>
 </section>
