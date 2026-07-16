@@ -11,20 +11,21 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
-// Mezcla de ambiente, comunidad y juego (los "personajes" funcionan aquí como vida del club).
+// Mezcla de ambiente, comunidad y juego. Las VERTICALES van en huecos altos (row-span-2)
+// y las HORIZONTALES en huecos normales, para que ninguna salga recortada.
 const photos = [
-  { name: 'padel-tournament.jpg', span: 'sm:col-span-2 sm:row-span-2' },
-  { name: 'community-courtside.jpg', span: 'sm:row-span-2' },
+  { name: 'padel-tournament.jpg', span: 'sm:row-span-2' }, // vertical (el mate)
   { name: 'terrace-night.jpg', span: '' },
   { name: 'bar-interior.jpg', span: '' },
+  { name: 'community-courtside.jpg', span: 'sm:row-span-2' }, // vertical
   { name: 'coaches.jpg', span: '' },
   { name: 'events-group.jpg', span: '' },
-  { name: 'coach-kid.jpg', span: '' },
-  { name: 'padel-highfive.jpg', span: '' },
-  { name: 'community-women.jpg', span: '' },
+  { name: 'coach-kid.jpg', span: 'sm:row-span-2' }, // vertical
   { name: 'aerial-golden.jpg', span: '' },
-  { name: 'padel-women-action.jpg', span: '' },
-  { name: 'community-team.jpg', span: '' },
+  { name: 'community-women.jpg', span: '' },
+  { name: 'padel-woman.jpg', span: 'sm:row-span-2' }, // vertical
+  { name: 'padel-highfive.jpg', span: '' },
+  { name: 'shop.jpg', span: '' },
 ];
 ---
 

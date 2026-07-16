@@ -5,7 +5,6 @@ import FeatureSplit from '../../components/sections/FeatureSplit.astro';
 import Section from '../../components/ui/Section.astro';
 import Heading from '../../components/ui/Heading.astro';
 import Icon from '../../components/ui/Icon.astro';
-import PhotoBand from '../../components/sections/PhotoBand.astro';
 import CtaBanner from '../../components/sections/CtaBanner.astro';
 import { languages, useTranslations, getDict, type Lang } from '../../i18n/ui';
 import { club } from '../../content/club';
@@ -26,7 +25,7 @@ const dict = getDict(lang);
     title={t('footballSection.title')}
     desc={t('footballSection.desc')}
     features={dict.footballSection.features}
-    image="football-pitch.jpg"
+    image="football-aerial.jpg"
     ctaLabel={t('footballSection.cta')}
     ctaHref={club.booking}
     ctaExternal
@@ -44,7 +43,6 @@ const dict = getDict(lang);
         ))
       }
     </div>
-    <PhotoBand images={['football-aerial.jpg', 'football-pitch.jpg', 'club-overview.jpg']} class="mt-12" />
   </Section>
 
   <CtaBanner lang={lang} />

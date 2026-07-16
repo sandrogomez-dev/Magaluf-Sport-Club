@@ -4,20 +4,23 @@ import { img } from '../../lib/images';
 
 interface Props {
   images: string[];
+  aspect?: 'portrait' | 'landscape';
   class?: string;
 }
-const { images, class: className = '' } = Astro.props;
+const { images, aspect = 'landscape', class: className = '' } = Astro.props;
 
 // Columnas según cantidad (2-3-4), para que la banda quede equilibrada.
 const cols = images.length <= 2 ? 2 : images.length === 3 ? 3 : 4;
 const colsCls = cols === 2 ? 'sm:grid-cols-2' : cols === 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-4';
+// La orientación del hueco respeta la de la foto (verticales de acción vs. horizontales de instalaciones).
+const aspectCls = aspect === 'portrait' ? 'aspect-[3/4]' : 'aspect-[4/3]';
 ---
 
 <div class={`grid grid-cols-2 gap-3 sm:gap-4 ${colsCls} ${className}`}>
   {
     images.map((name, i) => (
       <figure
-        class="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-surface"
+        class={`group relative ${aspectCls} overflow-hidden rounded-2xl bg-surface`}
         data-reveal
         style={`transition-delay:${i * 60}ms`}
       >
