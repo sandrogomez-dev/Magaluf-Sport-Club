@@ -1,0 +1,9 @@
+{
+  // Worker de solo estáticos: sirve la carpeta dist/ (build de Astro).
+  // Deploy:  npm run build  &&  npx wrangler deploy
+  "name": "magaluf-sport-club",
+  "compatibility_date": "2025-01-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}
