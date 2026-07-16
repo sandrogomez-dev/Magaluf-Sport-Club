@@ -2,7 +2,7 @@ import type { ImageMetadata } from 'astro';
 
 /**
  * Carga todas las imágenes de src/assets/images de forma estática (astro:assets).
- * Uso:  import { img } from '../lib/images';  <Image src={img('team-bar.jpg')} .. />
+ * Uso:  import { img } from '../lib/images';  <Image src={img('terrace-night.jpg')} .. />
  */
 const images = import.meta.glob<{ default: ImageMetadata }>(
   '/src/assets/images/*.{jpg,jpeg,png,webp,avif}',

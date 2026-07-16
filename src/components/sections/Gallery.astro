@@ -13,21 +13,25 @@ const t = useTranslations(lang);
 
 // Mezcla de ambiente, comunidad y juego (los "personajes" funcionan aquí como vida del club).
 const photos = [
-  { name: 'terrace-night.jpg', span: 'sm:col-span-2 sm:row-span-2' },
-  { name: 'events-group.jpg', span: '' },
-  { name: 'coaches.jpg', span: '' },
-  { name: 'bar-interior.jpg', span: '' },
-  { name: 'padel-highfive.jpg', span: '' },
+  { name: 'padel-tournament.jpg', span: 'sm:col-span-2 sm:row-span-2' },
   { name: 'community-courtside.jpg', span: 'sm:row-span-2' },
+  { name: 'terrace-night.jpg', span: '' },
+  { name: 'bar-interior.jpg', span: '' },
+  { name: 'coaches.jpg', span: '' },
+  { name: 'events-group.jpg', span: '' },
+  { name: 'coach-kid.jpg', span: '' },
+  { name: 'padel-highfive.jpg', span: '' },
   { name: 'community-women.jpg', span: '' },
   { name: 'aerial-golden.jpg', span: '' },
+  { name: 'padel-women-action.jpg', span: '' },
+  { name: 'community-team.jpg', span: '' },
 ];
 ---
 
 <Section bg="surface">
   <Heading eyebrow={t('gallery.title')} title={t('gallery.subtitle')} align="center" />
 
-  <div class="mt-12 grid auto-rows-[180px] grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+  <div class="mt-12 grid auto-rows-[180px] grid-cols-2 gap-3 sm:grid-flow-dense sm:grid-cols-4 sm:gap-4">
     {
       photos.map((p, i) => (
         <figure

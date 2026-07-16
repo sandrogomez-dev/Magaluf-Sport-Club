@@ -25,3 +25,6 @@ npm-debug.log*
 
 # vídeos originales pesados (el comprimido va en public/video/)
 /src/assets/video/
+
+# volcado en bruto del Drive (curamos y las buenas van a src/assets/images/)
+/src/assets/drive/

@@ -5,6 +5,7 @@ import EventsTeaser from '../../components/sections/EventsTeaser.astro';
 import Section from '../../components/ui/Section.astro';
 import Heading from '../../components/ui/Heading.astro';
 import Icon from '../../components/ui/Icon.astro';
+import PhotoBand from '../../components/sections/PhotoBand.astro';
 import CtaBanner from '../../components/sections/CtaBanner.astro';
 import { languages, useTranslations, getDict, type Lang } from '../../i18n/ui';
 
@@ -33,6 +34,7 @@ const categories: string[] = dict.events.categories;
         ))
       }
     </div>
+    <PhotoBand images={['padel-tournament.jpg', 'events-group.jpg', 'community-team.jpg', 'community-women.jpg']} class="mt-12" />
   </Section>
 
   <CtaBanner lang={lang} />

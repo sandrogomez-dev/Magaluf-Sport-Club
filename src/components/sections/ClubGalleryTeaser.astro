@@ -1,0 +1,30 @@
+---
+import Section from '../ui/Section.astro';
+import Heading from '../ui/Heading.astro';
+import Icon from '../ui/Icon.astro';
+import PhotoBand from './PhotoBand.astro';
+import { useTranslations, localizePath, type Lang } from '../../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const clubPath = localizePath(lang, '/nosotros');
+
+const photos = ['terrace-night.jpg', 'community-courtside.jpg', 'padel-woman.jpg', 'aerial-golden.jpg'];
+---
+
+<Section bg="surface">
+  <Heading eyebrow={t('gallery.title')} title={t('gallery.subtitle')} align="center" />
+  <PhotoBand images={photos} class="mt-12" />
+  <div class="mt-10 text-center" data-reveal>
+    <a
+      href={clubPath}
+      class="inline-flex items-center gap-2 rounded-full bg-navy px-8 py-4 font-display text-lg font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-brand"
+    >
+      {t('nav.club')}
+      <Icon name="arrow" size={18} />
+    </a>
+  </div>
+</Section>

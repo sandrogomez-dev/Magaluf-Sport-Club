@@ -6,6 +6,7 @@ import Section from '../../components/ui/Section.astro';
 import Heading from '../../components/ui/Heading.astro';
 import Icon from '../../components/ui/Icon.astro';
 import MethodSections from '../../components/sections/MethodSections.astro';
+import PhotoBand from '../../components/sections/PhotoBand.astro';
 import VideoSection from '../../components/sections/VideoSection.astro';
 import CtaBanner from '../../components/sections/CtaBanner.astro';
 import { languages, useTranslations, getDict, localizePath, type Lang } from '../../i18n/ui';
@@ -56,6 +57,7 @@ const ph = dict.padelHub;
         ))
       }
     </div>
+    <PhotoBand images={['coach-kid.jpg', 'padel-coaching.jpg', 'padel-women-action.jpg', 'padel-man-cap.jpg']} class="mt-8" />
   </Section>
 
   <!-- Clases particulares (basadas en el método) -->
