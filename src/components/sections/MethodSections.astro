@@ -2,6 +2,7 @@
 import Section from '../ui/Section.astro';
 import Heading from '../ui/Heading.astro';
 import Icon from '../ui/Icon.astro';
+import PhotoBand from './PhotoBand.astro';
 import { useTranslations, getDict, localizePath, type Lang } from '../../i18n/ui';
 
 interface Props {
@@ -21,6 +22,7 @@ const contact = localizePath(lang, '/contacto');
     <p class="mt-3 font-display text-lg font-semibold text-gold">{m.tagline}</p>
     <p class="mt-6 text-xl leading-relaxed text-muted">{m.intro}</p>
   </div>
+  <PhotoBand images={['padel-clay.jpg', 'padel-woman.jpg', 'padel-tournament.jpg', 'community-courtside.jpg']} aspect="portrait" class="mt-12" />
 </Section>
 
 <!-- 5 pilares -->
